@@ -8,21 +8,26 @@
 </head>
 <body>
   <div class="app-shell">
-    <div class="app-brand">Infusion<br />Therapy<br />Calculations</div>
+    <aside class="app-sidebar" aria-label="Course navigation">
+      <div class="app-brand">Infusion<br />Therapy<br />Calculations</div>
+      <nav class="app-nav" id="courseNav" aria-label="Course sections"></nav>
+    </aside>
 
-    <header class="app-header">
-      <div class="course-title">Infusion Therapy &amp; Drug Calculations</div>
-      <div class="progress-wrap">
-        <span id="progressLabel">0% complete</span>
-        <div class="progress-bar"><span id="progressFill"></span></div>
-      </div>
-    </header>
+    <section class="app-main">
+      <header class="app-header">
+        <div class="course-title">Infusion Therapy &amp; Drug Calculations</div>
+        <div class="progress-wrap" aria-live="polite">
+          <span id="progressLabel">0% complete</span>
+          <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span id="progressFill"></span>
+          </div>
+        </div>
+      </header>
 
-    <nav class="app-nav" id="courseNav"></nav>
-
-    <main class="app-content">
-      <iframe id="contentFrame" title="Course content"></iframe>
-    </main>
+      <main class="app-content">
+        <iframe id="contentFrame" title="Course content" allow="fullscreen"></iframe>
+      </main>
+    </section>
   </div>
 
   <script src="assets/scorm-api.js"></script>

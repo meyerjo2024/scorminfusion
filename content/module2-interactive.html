@@ -251,6 +251,24 @@
   <span class="meta-bar">Module 2: Interactive Calculators &amp; Simulator · 60 minutes · Hands-on Practice</span>
   <h1>Module 2: Interactive Drug Calculators &amp; Syringe Driver Simulator</h1>
 
+  <details class="course-orientation" open>
+    <summary>Module 2 learning plan</summary>
+    <div class="orientation-grid">
+      <section>
+        <h3>Module objectives</h3>
+        <ul>
+          <li>Calculate dose-to-volume, infusion rates, weight-based doses, and gravity drip rates.</li>
+          <li>Enter and interpret editable drug, concentration, weight, and pump-rate parameters.</li>
+          <li>Recognise start, pause, completion, and occlusion states in a syringe-driver simulation.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>How to use the activities</h3>
+        <p>Attempt each calculation before revealing the worked solution. Change one input at a time, check the units, and compare the result with your independent calculation. The simulator is educational only; it does not control a real device.</p>
+      </section>
+    </div>
+  </details>
+
   <h2>2.1 Interactive Drug Dose Calculator</h2>
   <p>Use this calculator to practice dose-to-volume conversions. Enter the desired dose, drug concentration, and units to calculate the volume to draw up.</p>
 
@@ -421,7 +439,7 @@
     <h3>🔬 Real-Time Syringe Driver Simulation</h3>
     <p><strong>Instructions:</strong> Select your drug and infusion rate, then click "Start Infusion" to begin. Watch the plunger move and the volume decrease in real-time. You can pause/resume, simulate an occlusion alarm, or stop and reset the simulation.</p>
 
-    <canvas id="syringeCanvas" class="simulator-canvas" width="550" height="180"></canvas>
+    <canvas id="syringeCanvas" class="simulator-canvas" width="550" height="180" role="img" aria-label="Animated syringe pump simulation showing delivered and remaining volume">Your browser does not support the animated syringe display. Use the text controls and status display below.</canvas>
     <div id="syringeControls"></div>
   </div>
 

@@ -14,9 +14,9 @@
 
   <organizations default="ORG-INFUSION">
     <organization identifier="ORG-INFUSION">
-      <title>Paramedic Infusion Therapy &amp; Drug Calculations</title>
+      <title>Infusion Therapy &amp; Drug Calculations</title>
       <item identifier="ITEM-COURSE" identifierref="RES-COURSE" isvisible="true">
-        <title>Paramedic Infusion Therapy &amp; Drug Calculations</title>
+        <title>Infusion Therapy &amp; Drug Calculations</title>
         <adlcp:masteryscore>60</adlcp:masteryscore>
         <adlcp:timelimitaction>continue,no message</adlcp:timelimitaction>
         <adlcp:datafromlms></adlcp:datafromlms>
@@ -41,6 +41,11 @@
       <file href="content/assets/images/iv-anatomy.svg" />
       <file href="content/assets/images/infusion-pump.svg" />
       <file href="content/assets/images/drug-concentrations.svg" />
+      <file href="CDST OCT 2025.pdf" />
+      <file href="Approach to the CCT patient flashcards(1).docx" />
+      <file href="Infusion lab exercises.docx" />
+      <file href="Evidence-Based Guidelines for Prehospital Pain Management  Recommendations.pdf" />
+      <file href="StandardsfromtheQMHigherEducationRubric.pdf" />
     </resource>
   </resources>
 </manifest>

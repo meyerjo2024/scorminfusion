@@ -222,6 +222,19 @@ If opened directly in a browser (e.g., `content/index.html` via file:// or http:
 - Course remains fully usable for preview/authoring
 - No score or completion data is persisted (naturally)
 
+## Quality Matters Alignment
+
+The course orientation and navigation are designed against the Quality Matters Higher Education Rubric reference included in this repository:
+
+- **Course overview:** purpose, sequence, prerequisites, technology requirements, expected digital skills, safety policies, support routes, and privacy guidance appear in the “Start here” orientation.
+- **Measurable objectives:** module objectives use observable actions and are connected to readings, videos, calculation practice, the simulator, and the final assessment.
+- **Assessment and feedback:** learners receive immediate feedback from calculation exercises, can reveal worked answers after attempting them, and receive a scored 40-question summative assessment with a published 60% pass mark.
+- **Instructional materials:** local repository references, clinical source documents, accessible learning notes, and optional video links are provided. Core learning does not depend on external video availability.
+- **Active learning:** learners enter calculations, operate the simulator, reflect using de-identified information, and track completion through the SCORM navigation.
+- **Accessibility and usability:** responsive layout, readable contrast, keyboard-focus indicators, labelled controls, text alternatives for the simulator, captions/notes or fallback links for videos, and mobile-friendly navigation are included.
+
+The package is still subject to institutional accessibility review, clinical governance review, and testing in the target LMS before deployment.
+
 ## Troubleshooting
 
 ### Videos Don't Load

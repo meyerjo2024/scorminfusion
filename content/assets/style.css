@@ -141,3 +141,60 @@ tr:hover { background: #e2e8f0; }
   .cdst-action { min-width: auto; border-left: none; border-top: 3px solid #ccc; }
   .control-panel { grid-template-columns: 1fr; }
 }
+
+/* QM-aligned responsive course shell and spacious reading layout */
+html, body { min-height: 100%; }
+body { overflow-x: hidden; }
+.app-shell { display: grid; grid-template-columns: 250px minmax(0, 1fr); min-height: 100vh; width: 100%; }
+.app-sidebar { display: flex; flex-direction: column; min-width: 0; background: #f8f9fa; border-right: 1px solid #d9e2ec; }
+.app-brand { min-width: 0; width: 100%; padding: 28px 18px; font-size: 19px; letter-spacing: .02em; }
+.app-nav { min-width: 0; width: 100%; padding: 18px 12px; border: 0; overflow-y: auto; }
+.app-nav a { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 8px; align-items: start; font-size: 14px; line-height: 1.35; }
+.app-nav a .step-num { display: inline-flex; width: 26px; height: 26px; align-items: center; justify-content: center; border-radius: 50%; background: #dbeafe; color: #1e3a8a; font-weight: 700; }
+.app-nav a.active .step-num, .app-nav a.complete .step-num { background: rgba(255,255,255,.25); color: inherit; }
+.app-main { min-width: 0; display: flex; flex-direction: column; min-height: 100vh; background: #fff; }
+.app-header { flex: 0 0 auto; padding: 20px clamp(20px, 4vw, 52px); border-bottom: 1px solid #d9e2ec; }
+.app-content { flex: 1 1 auto; min-width: 0; padding: 0; overflow: hidden; }
+.app-content iframe { display: block; width: 100%; height: calc(100vh - 106px); min-height: 720px; border: 0; background: #fff; }
+.progress-bar[role="progressbar"] { position: relative; }
+
+/* Improve reading space inside lesson documents */
+.page { width: 100%; max-width: 1240px; padding: 34px clamp(22px, 4vw, 56px) 60px; }
+.page h1 { max-width: 1100px; }
+.video-wrapper { min-height: 320px; }
+.video-fallback { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px; padding: 12px 14px; background: #eef6ff; border: 1px solid #b9d7f5; border-radius: 6px; font-size: 14px; }
+.video-fallback a { color: #145da0; font-weight: 700; }
+.video-notes { margin-top: 10px; padding: 8px 12px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+.video-notes summary { cursor: pointer; font-weight: 700; color: #2c5282; }
+
+@media (max-width: 900px) {
+  .app-shell { grid-template-columns: 210px minmax(0, 1fr); }
+  .app-content iframe { min-height: 680px; }
+  .course-title { font-size: 20px; }
+}
+
+@media (max-width: 700px) {
+  .app-shell { display: block; }
+  .app-sidebar { display: block; border-right: 0; border-bottom: 1px solid #d9e2ec; }
+  .app-brand { padding: 16px; font-size: 16px; }
+  .app-nav { display: flex; gap: 8px; overflow-x: auto; padding: 10px; }
+  .app-nav a { min-width: 210px; margin: 0; }
+  .app-content iframe { height: calc(100vh - 190px); min-height: 650px; }
+}
+
+/* Course orientation and QM alignment */
+.course-orientation { margin: 0 0 28px; background: #f7fbff; border: 1px solid #b9d7f5; border-radius: 10px; overflow: hidden; }
+.course-orientation > summary { padding: 16px 20px; cursor: pointer; background: #e8f3ff; color: #1e4e79; font-size: 18px; font-weight: 700; }
+.course-orientation > summary:focus-visible, .video-notes summary:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+.orientation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 20px; }
+.orientation-grid section { padding: 16px; background: #fff; border: 1px solid #d9e8f5; border-radius: 8px; }
+.orientation-grid section h3 { margin-top: 0; color: #1e4e79; }
+.orientation-grid section p:last-child, .orientation-grid section ul:last-child, .orientation-grid section ol:last-child { margin-bottom: 0; }
+.save-note { min-height: 1.4em; margin-top: 8px; color: #276749; font-size: 13px; }
+
+@media (max-width: 760px) {
+  .orientation-grid { grid-template-columns: 1fr; padding: 14px; }
+  .cdst-content, .cdst-action { font-size: 13px; }
+}
+.reference-list a { color: #145da0; }
+.reference-list a:hover { color: #0b3c6f; }
