@@ -1,591 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Infusion Therapy &amp; Drug Calculations</title>
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <div class="page">
 
-  <span class="meta-bar">Module 1 of 1 &middot; 120 minutes &middot; Infusion Therapy, Drug Calculations &amp; Patient Safety</span>
-  <h1>Infusion Therapy &amp; Drug Calculations</h1>
+<span class="meta-bar">Module 1 &middot; 120 minutes &middot; Infusion Therapy, Drug Calculations &amp; Patient Safety</span>
+<h1>Infusion Therapy &amp; Drug Calculations</h1>
 
-  <h2>5.1 Introduction to Infusion Therapy in Prehospital &amp; Critical Care</h2>
-  <p>Intravenous infusion therapy is a critical intervention in paramedic practice, enabling precise delivery of medications, fluids, blood products, and electrolytes directly into the circulatory system. Mastery of infusion calculations is essential for patient safety — calculation errors can result in under-dosing (therapeutic failure), overdosing (toxicity, cardiac arrest, respiratory depression), or incorrect fluid administration rates (fluid overload, pulmonary oedema).</p>
+<h2>1. Introduction to Infusion Therapy in Prehospital &amp; Critical Care</h2>
+<p>Intravenous infusion therapy is a critical intervention in paramedic practice, enabling precise delivery of medications, fluids, blood products, and electrolytes directly into the circulatory system. Mastery of infusion calculations is essential for patient safety — calculation errors can result in under-dosing (therapeutic failure), overdosing (toxicity, cardiac arrest, respiratory depression), or incorrect fluid administration rates (fluid overload, pulmonary oedema).</p>
 
-  <p>This module covers the theoretical foundation, practical calculation methods, common infusion types, medication-specific dosing, and safety protocols that underpin safe infusion practice in South African paramedic care.</p>
+<h2>2. Clinical Approach: CCT & CDST Framework</h2>
 
-  <h2>5.2 Clinical Approach to Infusion Therapy: CCT & CDST Framework</h2>
-  
-  <h3>5.2.1 Critical Care Transfer (CCT) Approach</h3>
-  <p>When managing infusion therapy in the prehospital and inter-facility transfer context, apply the <strong>CCT (Critical Care Transfer)</strong> framework:</p>
+<h3>2.1 Critical Care Transfer (CCT) Approach</h3>
+<p>When managing infusion therapy in the prehospital and inter-facility transfer context, apply the <strong>CCT framework</strong>:</p>
+
+<div class="cct-grid">
+  <div class="cct-card cct-c">
+    <div class="cct-letter">C</div>
+    <div class="cct-title">Continuous Monitoring</div>
+    <div class="cct-text">Vital signs, ECG, SpO₂, ETCO₂, and level of consciousness must be monitored continuously. Document baseline observations before, during, and after infusion.</div>
+  </div>
+  <div class="cct-card cct-c2">
+    <div class="cct-letter">C</div>
+    <div class="cct-title">Catheter & Line Assessment</div>
+    <div class="cct-text">Verify IV cannula patency, site integrity, and infusion device function. Check for signs of infiltration, phlebitis, or extravasation.</div>
+  </div>
+  <div class="cct-card cct-t">
+    <div class="cct-letter">T</div>
+    <div class="cct-title">Transport Preparation</div>
+    <div class="cct-text">Ensure adequate supply of infusion fluid, drugs, and backup equipment. Calculate total infusion duration with 30 minutes contingency.</div>
+  </div>
+</div>
+
+<h3>2.2 Clinical Decision Support Tool (CDST)</h3>
+<p>Use the <strong>CDST framework</strong> for every infusion decision:</p>
+
+<div class="cdst-container">
+  <div class="cdst-row">
+    <div class="cdst-num cdst-1">1</div>
+    <div class="cdst-content">
+      <strong>Indication</strong> — What is the clinical indication for this infusion?
+    </div>
+    <div class="cdst-action">Verify against protocols/guidelines</div>
+  </div>
+  <div class="cdst-row">
+    <div class="cdst-num cdst-2">2</div>
+    <div class="cdst-content">
+      <strong>Drug</strong> — Is this the correct drug, dose, and route?
+    </div>
+    <div class="cdst-action">Double-check calculation, concentration, compatibilities</div>
+  </div>
+  <div class="cdst-row">
+    <div class="cdst-num cdst-3">3</div>
+    <div class="cdst-content">
+      <strong>Patient</strong> — Does the patient have allergies or comorbidities?
+    </div>
+    <div class="cdst-action">Adjust for weight, renal/hepatic impairment</div>
+  </div>
+  <div class="cdst-row">
+    <div class="cdst-num cdst-4">4</div>
+    <div class="cdst-content">
+      <strong>Equipment</strong> — Is the correct administration set available?
+    </div>
+    <div class="cdst-action">Confirm pump compatibility, drip set type</div>
+  </div>
+  <div class="cdst-row">
+    <div class="cdst-num cdst-5">5</div>
+    <div class="cdst-content">
+      <strong>Monitoring</strong> — What observations are required?
+    </div>
+    <div class="cdst-action">Set parameters, document response</div>
+  </div>
+  <div class="cdst-row">
+    <div class="cdst-num cdst-6">6</div>
+    <div class="cdst-content">
+      <strong>Contingency</strong> — What are the risks and backup plan?
+    </div>
+    <div class="cdst-action">Have reversal agents, alternative access ready</div>
+  </div>
+</div>
+
+<h2>3. Types of Intravenous Infusions</h2>
+<p>Understanding the type of infusion prescribed determines the calculation method, equipment required, and monitoring frequency.</p>
+
+<h3>3.1 Continuous IV Infusion</h3>
+<p>Medications or fluids administered at a constant, uninterrupted rate over an extended period. Common examples include maintenance fluids, vasopressors, sedatives, and analgesics.</p>
+
+<h3>3.2 Intermittent IV Infusion</h3>
+<p>Medications given at discrete intervals, typically over 20–60 minutes, via a secondary IV line. Examples: antibiotics, antiemetics, some analgesics.</p>
+
+<h3>3.3 IV Bolus</h3>
+<p>Rapid administration of a medication directly into the vein. Used for emergency medications where immediate effect is required.</p>
+
+<h3>3.4 Blood Product Transfusion</h3>
+<p>Administration of blood or blood products requiring specific protocols, consent, and monitoring for transfusion reactions.</p>
+
+<h2>4. Types of Infusion Pumps</h2>
+
+<h3>4.1 Volumetric Infusion Pumps</h3>
+<p>Large-volume pumps designed for continuous infusions. They deliver fluids at a programmed rate (mL/hour) and are ideal for maintenance fluids, blood products, and continuous medication infusions.</p>
+
+<h3>4.2 Syringe Drivers / Syringe Pumps</h3>
+<p>Compact pumps that push the plunger of a syringe to deliver precise, low-volume infusions. Essential for critical care medications requiring exact dosing (e.g., vasopressors, sedatives, analgesics).</p>
+
+<h3>4.3 Target-Controlled Infusion (TCI) Pumps</h3>
+<p>Advanced computerized pumps that calculate and deliver drug doses based on pharmacokinetic models to achieve a target plasma or effect-site concentration. Used primarily for anaesthetic agents (propofol, remifentanil).</p>
+
+<div class="info-box">
+  <h4>TCI Pump Features</h4>
   <ul>
-    <li><strong>C - Continuous Monitoring:</strong> Vital signs, ECG, SpO₂, ETCO₂, and level of consciousness must be monitored continuously during infusion. Document baseline observations before, during, and after infusion.</li>
-    <li><strong>C - Catheter & Line Assessment:</strong> Verify IV cannula patency, site integrity, and infusion device function. Check for signs of infiltration, phlebitis, or extravasation before and during transport.</li>
-    <li><strong>T - Transport Preparation:</strong> Ensure adequate supply of infusion fluid, drugs, and backup equipment. Calculate total infusion duration and have sufficient supplies for the journey plus 30 minutes contingency.</li>
+    <li><strong>Modes:</strong> Plasma concentration target vs. Effect-site concentration target</li>
+    <li><strong>Built-in pharmacokinetic models:</strong> Marsh, Schnider, Minto, Eleveld</li>
+    <li><strong>Real-time display:</strong> Current calculated concentration, predicted effect</li>
+    <li><strong>Safety features:</strong> Maximum dose limits, syringe recognition, drug library</li>
   </ul>
-  
-  <h3>5.2.2 Clinical Decision Support Tool (CDST) for Infusions</h3>
-  <p>Use the <strong>CDST framework</strong> for every infusion decision:</p>
-  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-    <tr style="background: #f0f0f0;">
-      <th>Step</th><th>Question</th><th>Action</th>
-    </tr>
-    <tr><td><strong>1. Indication</strong></td><td>What is the clinical indication for this infusion?</td><td>Verify against protocols/guidelines</td></tr>
-    <tr><td><strong>2. Drug</strong></td><td>Is this the correct drug, dose, and route?</td><td>Double-check calculation, concentration</td></tr>
-    <tr><td><strong>3. Patient</strong></td><td>Does the patient have allergies or comorbidities?</td><td>Adjust for weight, renal/hepatic impairment</td></tr>
-    <tr><td><strong>4. Equipment</strong></td><td>Is the correct administration set and device available?</td><td>Confirm pump compatibility, drip set type</td></tr>
-    <tr><td><strong>5. Monitoring</strong></td><td>What observations are required and how often?</td><td>Set parameters, document response</td></tr>
-    <tr><td><strong>6. Contingency</strong></td><td>What are the risks and what is the backup plan?</td><td>Have reversal agents, alternative access ready</td></tr>
-  </table>
-  
-  <h3>5.2.3 Infusion Lab Competencies</h3>
-  <p>The following competencies are essential for paramedic infusion practice and should be practiced in a skills lab environment:</p>
-  <ol>
-    <li><strong>IV Cannulation:</strong> Aseptic technique, vein selection, cannula sizing (14-24G), securing and documentation.</li>
-    <li><strong>Infusion Pump Operation:</strong> Programming volumetric pumps, loading syringe drivers, alarm recognition and troubleshooting.</li>
-    <li><strong>Gravity Drip Calculations:</strong> Manual calculation of drip rates using drop factor (10, 15, 20, 60 gtt/mL).</li>
-    <li><strong>Drug Reconstitution:</strong> Correct dilution of powdered medications to achieve target concentration.</li>
-    <li><strong>Weight-Based Dosing:</strong> Calculating mcg/kg/min, mg/kg doses for emergency drugs.</li>
-    <li><strong>Paediatric Infusions:</strong> Using Broselow tape, calculating microdrip rates, syringe driver setup.</li>
-    <li><strong>Blood Product Administration:</strong> Type and crossmatch verification, prime set, monitor for reactions.</li>
-    <li><strong>Infusion Troubleshooting:</strong> Infiltration, occlusion, air embolism, pump malfunction responses.</li>
-  </ol>
-  
-  <div class="reflection-box">
-    <h4>Reflective Practice</h4>
-    <p>Consider a recent patient where you administered an IV infusion. Apply the CCT and CDST frameworks: What went well? What would you do differently?</p>
-    <textarea id="reflection1" rows="4" placeholder="Enter your reflection here..."></textarea>
+  <p><strong>Paramedic relevance:</strong> While primarily used in theatre and ICU, understanding TCI principles is important for inter-facility transfers of sedated patients.</p>
+</div>
+
+<h3>4.4 Patient-Controlled Analgesia (PCA) Pumps</h3>
+<p>Allow patients to self-administer preset doses of analgesic medication within safety limits. Include lockout periods to prevent overdose.</p>
+
+<h3>4.5 Elastomeric Pumps</h3>
+<p>Disposable, non-electronic pumps using elastic membrane pressure to deliver medication. Useful for ambulatory infusions and home care.</p>
+
+<h2>5. Drug Concentration & Dilution Principles</h2>
+<p>Drug concentrations may be expressed as:</p>
+<ul>
+  <li><strong>mg/mL:</strong> milligrams per millilitre (most common)</li>
+  <li><strong>mcg/mL:</strong> micrograms per millilitre (for potent drugs)</li>
+  <li><strong>% w/v:</strong> percentage weight/volume (e.g., 0.9% NaCl = 0.9 g/100 mL)</li>
+  <li><strong>Ratio strength:</strong> 1:1000, 1:10,000 (parts of drug per parts of solution)</li>
+  <li><strong>Units/mL:</strong> for biologicals (insulin, heparin)</li>
+</ul>
+
+<div class="video-container">
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/XhYKc3Q7TYA?rel=0&modestbranding=1" title="Dosage Calculations" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <p class="video-caption">Dosage Calculations Made Easy</p>
+</div>
+
+<h2>6. Infusion Rate Calculations</h2>
+
+<h3>6.1 Basic Formula</h3>
+<p><strong>Volume (mL) ÷ Time (hours) = Rate (mL/hour)</strong></p>
+
+<div class="example-box">
+  <h4>Example:</h4>
+  <p>Order: 1000 mL normal saline over 8 hours.</p>
+  <p>Rate = 1000 mL ÷ 8 hours = <strong>125 mL/hour</strong></p>
+</div>
+
+<h3>6.2 Gravity Drip Calculations</h3>
+<p><strong>Drop rate (gtt/min) = (Volume × Drop factor) ÷ Time (minutes)</strong></p>
+
+<div class="video-container">
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/jqvdRoWqLQE?rel=0&modestbranding=1" title="IV Drip Flow Rates" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <p class="video-caption">IV Drip Flow Rates and Drop Factor</p>
+</div>
+
+<h3>6.3 Weight-Based Dosing</h3>
+<p><strong>Dose (mcg/kg/min) × Weight (kg) × 60 ÷ Concentration (mcg/mL) = Rate (mL/hour)</strong></p>
+
+<div class="video-container">
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/FLm3v6KYKxM?rel=0&modestbranding=1" title="IV Infusion Calculations" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <p class="video-caption">IV Infusion Drip Rate Calculations</p>
+</div>
+
+<h2>7. Common Infusion Medications</h2>
+
+<h3>7.1 Analgesics</h3>
+<table class="med-table">
+  <tr><th>Drug</th><th>Concentration</th><th>Typical Range</th><th>Notes</th></tr>
+  <tr><td>Morphine</td><td>10 mg/mL</td><td>1-5 mg/hour</td><td>Monitor respiratory rate, sedation</td></tr>
+  <tr><td>Fentanyl</td><td>50 mcg/mL</td><td>25-200 mcg/hour</td><td>80-100× more potent than morphine</td></tr>
+  <tr><td>Ketamine</td><td>50 mg/mL</td><td>0.1-0.5 mg/kg/hour</td><td>Dissociative analgesia; preserves airway reflexes</td></tr>
+</table>
+
+<h3>7.2 Sedatives</h3>
+<table class="med-table">
+  <tr><th>Drug</th><th>Concentration</th><th>Typical Range</th><th>Notes</th></tr>
+  <tr><td>Midazolam</td><td>5 mg/mL</td><td>0.02-0.1 mg/kg/hour</td><td>Short-acting; reversible with flumazenil</td></tr>
+  <tr><td>Propofol</td><td>10 mg/mL</td><td>1-4 mg/kg/hour</td><td>Requires dedicated line; pain on injection</td></tr>
+</table>
+
+<h3>7.3 Vasopressors</h3>
+<table class="med-table">
+  <tr><th>Drug</th><th>Concentration</th><th>Typical Range</th><th>Notes</th></tr>
+  <tr><td>Adrenaline</td><td>1 mg/mL (1:1000)</td><td>0.01-0.5 mcg/kg/min</td><td>Central line preferred for high doses</td></tr>
+  <tr><td>Noradrenaline</td><td>1 mg/mL</td><td>0.01-3 mcg/kg/min</td><td>First-line for septic shock</td></tr>
+  <tr><td>Dopamine</td><td>40 mg/mL</td><td>2-20 mcg/kg/min</td><td>Dose-dependent effects</td></tr>
+</table>
+
+<h2>8. Paediatric Infusion Calculations</h2>
+<p>Paediatric dosing requires additional safety measures:</p>
+<ul>
+  <li>Always calculate based on actual weight (mg/kg, mcg/kg/min)</li>
+  <li>Use Broselow tape for emergency weight estimation</li>
+  <li>Prefer microdrip sets (60 gtt/mL) for accurate low-volume infusions</li>
+  <li>Double-check all calculations with a second practitioner</li>
+</ul>
+
+<h2>9. High-Alert Medications</h2>
+<p>Medications with high risk of causing significant patient harm when used in error:</p>
+<ul>
+  <li>Insulin</li>
+  <li>Opioids (morphine, fentanyl)</li>
+  <li>Vasopressors (adrenaline, noradrenaline)</li>
+  <li>Potassium chloride concentrate</li>
+  <li>Heparin</li>
+  <li>Neuromuscular blocking agents</li>
+</ul>
+
+<div class="warning-box">
+  <h4>Safety Strategies</h4>
+  <ul>
+    <li>Independent double-check of drug, dose, and rate</li>
+    <li>Use standard concentrations where possible</li>
+    <li>Label all infusion lines clearly</li>
+    <li>Never ignore pump alarms</li>
+  </ul>
+</div>
+
+<h2>10. Safe Infusion Practices</h2>
+
+<h3>10.1 Six Rights of Medication Administration</h3>
+<ol>
+  <li>Right patient</li>
+  <li>Right drug</li>
+  <li>Right dose</li>
+  <li>Right route</li>
+  <li>Right time</li>
+  <li>Right documentation</li>
+</ol>
+
+<h3>10.2 Additional Safety Checks</h3>
+<ul>
+  <li>Check expiry dates and drug integrity</li>
+  <li>Verify IV line patency before infusion</li>
+  <li>Ensure compatibility of co-infused medications</li>
+  <li>Monitor for adverse reactions throughout infusion</li>
+</ul>
+
+<div class="video-container">
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/fDt4ex78-HU?rel=0&modestbranding=1" title="IV Medication Administration" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <p class="video-caption">IV Medication Administration Nursing Skill</p>
+</div>
+
+<h2>11. Infusion Pump Troubleshooting</h2>
+<table class="alarm-table">
+  <tr><th>Alarm</th><th>Possible Cause</th><th>Action</th></tr>
+  <tr><td>Occlusion</td><td>Kinked line, clamped tubing, thrombosis</td><td>Check line, flush cannula, reposition</td></tr>
+  <tr><td>Air in Line</td><td>Empty bag, loose connection</td><td>Prime line, check connections</td></tr>
+  <tr><td>Low Battery</td><td>Battery depletion</td><td>Connect to mains power</td></tr>
+  <tr><td>Infusion Complete</td><td>Programmed volume delivered</td><td>Assess need for continuation</td></tr>
+</table>
+
+<h2>12. Blood Product Transfusion</h2>
+<p>Key principles for safe blood product administration:</p>
+<ul>
+  <li>Verify patient identity and blood product using two identifiers</li>
+  <li>Check blood group compatibility (ABO, Rh)</li>
+  <li>Monitor vital signs: baseline, 15 min, then hourly</li>
+  <li>Complete transfusion within 4 hours of removal from cold storage</li>
+</ul>
+
+<div class="warning-box">
+  <h4>Transfusion Reaction Signs</h4>
+  <p>Fever, chills, rash, dyspnoea, hypotension, back pain, dark urine</p>
+  <p><strong>Immediate action:</strong> Stop transfusion, maintain IV access with normal saline, notify medical team, send blood sample for haemolysis screen.</p>
+</div>
+
+<h2>13. Documentation & Medico-Legal Considerations</h2>
+<p>Comprehensive documentation must include:</p>
+<ul>
+  <li>Drug name, concentration, dose, and route</li>
+  <li>Calculation method and verification</li>
+  <li>Time started and completed</li>
+  <li>Patient response and any adverse events</li>
+  <li>Pump settings and any rate changes</li>
+</ul>
+
+<div class="info-box">
+  <h4>Legal Principle</h4>
+  <p>"If it is not documented, it did not happen." Your patient care record is the primary legal document examined in adverse outcomes.</p>
+</div>
+
+<h2>14. Practical Calculation Exercises</h2>
+
+<div class="exercise-container">
+  <div class="exercise">
+    <h4>Exercise 1: Basic Rate Calculation</h4>
+    <p>Order: 500 mL Hartmann's solution over 4 hours using a volumetric pump.</p>
+    <div class="answer-input">
+      <label>Enter your answer (mL/hour):</label>
+      <input type="number" class="student-answer" id="ex1-answer" placeholder="Your answer">
+      <button class="check-btn" onclick="checkAnswer(1, 125)">Check Answer</button>
+      <div class="answer-feedback" id="ex1-feedback"></div>
+      <button class="show-answer-btn" onclick="showAnswer(1, 'Rate = 500 mL ÷ 4 hours = 125 mL/hour')">Show Correct Answer</button>
+      <div class="correct-answer" id="ex1-correct"></div>
+    </div>
   </div>
 
-
-  <h2>5.2 Types of Intravenous Infusions</h2>
-  <p>Understanding the type of infusion prescribed determines the calculation method, equipment required (gravity drip vs. infusion pump), and monitoring frequency.</p>
-
-  <h3>5.2.1 Continuous IV Infusion</h3>
-  <p>Medications or fluids administered at a constant, uninterrupted rate over an extended period (hours to days). Common examples include maintenance fluids (crystalloids), vasopressors (noradrenaline, dopamine), sedatives (propofol, midazolam), and analgesics (morphine, fentanyl).</p>
-  <ul>
-    <li><strong>Flow rate units:</strong> mL/hour (volumetric pumps) or drops/minute (gravity drip sets).</li>
-    <li><strong>Clinical indication:</strong> Maintain stable plasma concentration of drug; replace ongoing fluid losses; provide haemodynamic support.</li>
-  </ul>
-
-  <h3>5.2.2 Intermittent IV Infusion (IV Piggyback)</h3>
-  <p>Medications given at discrete intervals, typically over 20–60 minutes, via a secondary IV line connected to the primary IV. Common examples: antibiotics (ceftriaxone, metronidazole), antiemetics (ondansetron), and some analgesics.</p>
-  <ul>
-    <li><strong>Flow rate units:</strong> mL/hour over the prescribed infusion duration.</li>
-    <li><strong>Clinical indication:</strong> Peak-trough dosing strategy; drugs with short half-lives requiring repeated dosing.</li>
-  </ul>
-
-  <h3>5.2.3 Bolus IV Push (Direct IV)</h3>
-  <p>Rapid injection of a medication directly into the venous circulation over seconds to 2–3 minutes. Examples: adrenaline (cardiac arrest), atropine, naloxone, diazepam.</p>
-  <ul>
-    <li><strong>Flow rate units:</strong> mg or mL per minute; often given undiluted or diluted in a small volume (5–10 mL).</li>
-    <li><strong>Clinical indication:</strong> Emergency resuscitation; rapid onset required; no time for infusion setup.</li>
-  </ul>
-
-  <h3>5.2.4 Total Parenteral Nutrition (TPN)</h3>
-  <p>Nutritional support for patients unable to meet nutritional needs enterally, consisting of amino acids (protein), dextrose (carbohydrate), lipid emulsion (fat), electrolytes, vitamins, and trace elements, administered via central venous access.</p>
-  <ul>
-    <li><strong>Flow rate units:</strong> mL/hour via volumetric pump; TPN is hyperosmolar and requires central line access (subclavian, internal jugular, PICC line).</li>
-    <li><strong>Clinical indication:</strong> Prolonged gut failure, bowel obstruction, severe malabsorption, major burns.</li>
-  </ul>
-
-  <h3>5.2.5 Subcutaneous Infusion</h3>
-  <p>Slow delivery of medications or fluids into the subcutaneous tissue, commonly used for chronic pain management (morphine via syringe driver), anticoagulation (low molecular weight heparin), or palliative care hydration (hypodermoclysis).</p>
-  <ul>
-    <li><strong>Flow rate units:</strong> mL/hour (typical 0.5–2 mL/hour for analgesics).</li>
-    <li><strong>Clinical indication:</strong> Poor IV access; home-based or palliative care; stable, predictable absorption required.</li>
-  </ul>
-
-  <h3>5.2.6 Blood &amp; Blood Product Transfusion</h3>
-  <p>Administration of packed red blood cells (PRBC), platelets, fresh frozen plasma (FFP), or cryoprecipitate. Requires strict cross-match, identification checks, and specific transfusion set (170-micron filter).</p>
-  <ul>
-    <li><strong>Flow rate units:</strong> mL/hour; PRBC typically given over 2–4 hours per unit unless rapid transfusion protocol for massive haemorrhage.</li>
-    <li><strong>Clinical indication:</strong> Acute blood loss, anaemia, coagulopathy, thrombocytopenia.</li>
-  </ul>
-
-  <div class="video-wrap">
-    <iframe src="https://www.youtube-nocookie.com/embed/jqvdRoWqLQE" title="IV Drip Flow Rates Drop Factor gtt/min Dosage Calculations Nursing | NCLEX Review" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <p class="video-caption">Video: <em>"IV Drip Flow Rates Drop Factor gtt/min Dosage Calculations Nursing | NCLEX Review"</em> — RegisteredNurseRN explains the fundamentals of IV flow rate calculations.</p>
-
-  <h2>5.3 Drug Concentration &amp; Dilution: Core Principles</h2>
-
-  <h3>5.3.1 Concentration Terminology</h3>
-  <p>Drug concentration expresses the mass (or units) of drug per unit volume of solution.</p>
-  <table class="criteria">
-    <tr><th>Unit</th><th>Meaning</th><th>Example</th></tr>
-    <tr><td><strong>mg/mL</strong></td><td>Milligrams per millilitre</td><td>Morphine 10 mg/mL means 10 mg of morphine in every 1 mL of solution.</td></tr>
-    <tr><td><strong>mcg/mL</strong></td><td>Micrograms per millilitre (1 mcg = 0.001 mg)</td><td>Adrenaline 100 mcg/mL (same as 0.1 mg/mL).</td></tr>
-    <tr><td><strong>% w/v</strong></td><td>Percentage weight/volume: grams of drug per 100 mL</td><td>0.9% saline = 0.9 g NaCl per 100 mL = 9 g/L.</td></tr>
-    <tr><td><strong>Units/mL</strong></td><td>Biological activity units (insulin, heparin)</td><td>Heparin 1000 units/mL.</td></tr>
-    <tr><td><strong>Ratio strength</strong></td><td>1:X = 1 gram in X mL</td><td>Adrenaline 1:1000 = 1 g in 1000 mL = 1 mg/mL.</td></tr>
-  </table>
-
-  <h3>5.3.2 The Fundamental Dosage Calculation Formula</h3>
-  <p>To calculate the <strong>volume</strong> required to deliver a desired dose:</p>
-  <pre><code>Volume (mL) = Desired Dose (mg) ÷ Concentration (mg/mL)</code></pre>
-  <p><strong>Example 1:</strong> To deliver 8 mg of morphine from a 10 mg/mL ampoule:</p>
-  <pre><code>Volume = 8 mg ÷ 10 mg/mL = 0.8 mL</code></pre>
-
-  <p><strong>Example 2:</strong> To deliver 500 mcg (0.5 mg) of adrenaline from a 1:1000 (1 mg/mL) ampoule:</p>
-  <pre><code>Volume = 0.5 mg ÷ 1 mg/mL = 0.5 mL</code></pre>
-
-  <h3>5.3.3 Converting Between Ratio Strength, %, and mg/mL</h3>
-  <table class="criteria">
-    <tr><th>Ratio Strength</th><th>% Equivalent</th><th>mg/mL</th></tr>
-    <tr><td>1:1000</td><td>0.1%</td><td>1 mg/mL</td></tr>
-    <tr><td>1:10,000</td><td>0.01%</td><td>0.1 mg/mL (100 mcg/mL)</td></tr>
-    <tr><td>1:100</td><td>1%</td><td>10 mg/mL</td></tr>
-  </table>
-
-  <p><strong>Memory aid:</strong> Adrenaline 1:1000 (for IM anaphylaxis) = <strong>1 mg/mL</strong>; Adrenaline 1:10,000 (for IV cardiac arrest) = <strong>0.1 mg/mL</strong>.</p>
-
-  <div class="video-wrap">
-    <iframe src="https://www.youtube-nocookie.com/embed/XhYKc3Q7TYA" title="Dosage Calculations Made Easy | Reconstitution Calculation Medication Problems Nursing Students (10)" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <p class="video-caption">Video: <em>"Dosage Calculations Made Easy | Reconstitution Calculation Medication Problems"</em> — RegisteredNurseRN tutorial on reconstitution and dose calculation.</p>
-
-  <h2>5.4 Infusion Rate Calculations</h2>
-
-  <h3>5.4.1 Calculating mL/hour for Volumetric Infusion Pumps</h3>
-  <p>Modern infusion pumps deliver a set volume per hour. To calculate the infusion rate in <strong>mL/hour</strong> when a dose (mg/hour or mcg/min) is prescribed:</p>
-  <pre><code>Infusion Rate (mL/hour) = [Desired Dose × Volume of Solution] ÷ [Drug Amount in Solution]</code></pre>
-
-  <p><strong>Example 3:</strong> A patient requires dopamine 5 mcg/kg/min. Patient weight 70 kg. You have 200 mg dopamine in 250 mL of 5% dextrose.</p>
-  <ol>
-    <li>Calculate total dose required: 5 mcg/kg/min × 70 kg = 350 mcg/min = 21,000 mcg/hour = 21 mg/hour.</li>
-    <li>Concentration of solution: 200 mg in 250 mL = 0.8 mg/mL.</li>
-    <li>Infusion rate: 21 mg/hour ÷ 0.8 mg/mL = <strong>26.25 mL/hour</strong>.</li>
-  </ol>
-
-  <h3>5.4.2 Calculating Drops per Minute (gtt/min) for Gravity Drip Sets</h3>
-  <p>When an infusion pump is unavailable, gravity drip sets are used. The drop factor (calibrated on the giving set packaging) varies by manufacturer:</p>
-  <ul>
-    <li><strong>Macrodrip sets:</strong> 10, 15, or 20 drops/mL.</li>
-    <li><strong>Microdrip (paediatric) sets:</strong> 60 drops/mL.</li>
-  </ul>
-
-  <p><strong>Formula:</strong></p>
-  <pre><code>Drop Rate (gtt/min) = [Volume (mL) × Drop Factor (gtt/mL)] ÷ Time (minutes)</code></pre>
-
-  <p><strong>Example 4:</strong> Infuse 1000 mL normal saline over 8 hours using a 20 gtt/mL macrodrip set.</p>
-  <ol>
-    <li>Time in minutes: 8 hours × 60 = 480 minutes.</li>
-    <li>Drop rate: (1000 mL × 20 gtt/mL) ÷ 480 min = 20,000 ÷ 480 = <strong>41.67 gtt/min</strong> (round to 42 gtt/min).</li>
-  </ol>
-
-  <h3>5.4.3 Weight-Based Infusions (mcg/kg/min)</h3>
-  <p>Many critical care drugs are dosed by body weight and time (mcg/kg/min). A systematic approach prevents errors:</p>
-  <ol>
-    <li>Convert patient weight to kg (if given in lbs: divide by 2.2).</li>
-    <li>Calculate total dose per minute: mcg/kg/min × patient weight (kg).</li>
-    <li>Convert to mcg/hour (multiply by 60) or mg/hour (divide by 1000).</li>
-    <li>Determine concentration (mg/mL or mcg/mL).</li>
-    <li>Calculate mL/hour using the infusion rate formula above.</li>
-  </ol>
-
-  <p><strong>Example 5:</strong> Noradrenaline 0.1 mcg/kg/min for a 65 kg patient. You have 4 mg noradrenaline in 250 mL of 5% dextrose.</p>
-  <ol>
-    <li>Dose per minute: 0.1 mcg/kg/min × 65 kg = 6.5 mcg/min = 390 mcg/hour = 0.39 mg/hour.</li>
-    <li>Concentration: 4 mg in 250 mL = 0.016 mg/mL.</li>
-    <li>Infusion rate: 0.39 mg/hour ÷ 0.016 mg/mL = <strong>24.375 mL/hour</strong> (round to 24.4 mL/hour).</li>
-  </ol>
-
-  <div class="video-wrap">
-    <iframe src="https://www.youtube-nocookie.com/embed/FLm3v6KYKxM" title="Drug Calculations for Nurses | IV Infusion Drip Rate Calculations (mL/hr) Dosage Calculations" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <p class="video-caption">Video: <em>"Drug Calculations for Nurses | IV Infusion Drip Rate Calculations (mL/hr)"</em> — RegisteredNurseRN on advanced infusion rate calculations.</p>
-
-  <h2>5.5 Common Infusion Drugs in Paramedic Practice: Dosing &amp; Calculations</h2>
-
-  <h3>5.5.1 Morphine Sulfate (Opioid Analgesic)</h3>
-  <p><strong>Indication:</strong> Moderate to severe pain, acute coronary syndrome, pulmonary oedema.<br>
-  <strong>Standard concentration:</strong> 10 mg/mL (1 mL ampoule).<br>
-  <strong>Typical adult dose:</strong> 2.5–10 mg IV bolus (titrated to effect), repeated every 5–10 minutes; maintenance infusion 1–5 mg/hour.</p>
-  <p><strong>Calculation example:</strong> Administer 5 mg IV from a 10 mg/mL ampoule.</p>
-  <pre><code>Volume = 5 mg ÷ 10 mg/mL = 0.5 mL</code></pre>
-  <p><strong>Adverse effects:</strong> Respiratory depression, hypotension, bradycardia, nausea. <strong>Reversal agent:</strong> Naloxone 0.4 mg IV.</p>
-
-  <h3>5.5.2 Fentanyl (Synthetic Opioid)</h3>
-  <p><strong>Indication:</strong> Severe pain (trauma, burns), procedural sedation, rapid sequence intubation adjunct.<br>
-  <strong>Standard concentration:</strong> 50 mcg/mL (2 mL or 10 mL ampoule).<br>
-  <strong>Typical adult dose:</strong> 25–100 mcg IV bolus (0.5–2 mcg/kg); infusion 25–100 mcg/hour.</p>
-  <p><strong>Calculation example:</strong> Administer 75 mcg IV from a 50 mcg/mL ampoule.</p>
-  <pre><code>Volume = 75 mcg ÷ 50 mcg/mL = 1.5 mL</code></pre>
-  <p><strong>Note:</strong> Fentanyl is 80–100× more potent than morphine. Onset 1–2 minutes; duration 30–60 minutes. <strong>Risk:</strong> Chest wall rigidity with rapid high-dose administration.</p>
-
-  <h3>5.5.3 Adrenaline (Epinephrine)</h3>
-  <p><strong>Indication:</strong> Cardiac arrest (VF/pVT, asystole, PEA), anaphylaxis, severe bradycardia, hypotension.<br>
-  <strong>Concentrations:</strong></p>
-  <ul>
-    <li><strong>1:1000 (1 mg/mL):</strong> For IM administration (anaphylaxis: 0.5 mg IM = 0.5 mL).</li>
-    <li><strong>1:10,000 (0.1 mg/mL):</strong> For IV administration (cardiac arrest: 1 mg IV = 10 mL).</li>
-  </ul>
-  <p><strong>Cardiac arrest dose:</strong> 1 mg IV every 3–5 minutes during CPR.<br>
-  <strong>Anaphylaxis dose:</strong> 0.5 mg IM (anterolateral thigh), repeat after 5 minutes if no response.</p>
-  <p><strong>Calculation example:</strong> Prepare 1 mg adrenaline for IV cardiac arrest from a 1:1000 (1 mg/mL) ampoule by diluting to 1:10,000.</p>
-  <pre><code>Draw up 1 mL (1 mg) of 1:1000 adrenaline, add 9 mL normal saline → 10 mL total volume (1 mg in 10 mL = 0.1 mg/mL = 1:10,000). Administer the entire 10 mL IV.</code></pre>
-
-  <h3>5.5.4 Amiodarone (Antiarrhythmic)</h3>
-  <p><strong>Indication:</strong> Refractory VF/pVT (after 3 DC shocks), stable VT, AF with rapid ventricular rate.<br>
-  <strong>Standard concentration:</strong> 50 mg/mL (3 mL ampoule = 150 mg).<br>
-  <strong>Cardiac arrest dose:</strong> 300 mg IV bolus (after 3rd shock), then 150 mg IV if VF/pVT persists.<br>
-  <strong>Stable VT/AF dose:</strong> 150 mg IV over 10 minutes, then infusion 1 mg/min for 6 hours, then 0.5 mg/min.</p>
-  <p><strong>Calculation example:</strong> Administer 300 mg amiodarone IV. You have 3 mL ampoules (150 mg each).</p>
-  <pre><code>300 mg ÷ 150 mg/ampoule = 2 ampoules = 6 mL total</code></pre>
-  <p><strong>Caution:</strong> Causes hypotension (administer over 10 minutes if patient has output); phlebitis (dilute in 5% dextrose, not saline).</p>
-
-  <h3>5.5.5 Normal Saline (0.9% NaCl)</h3>
-  <p><strong>Indication:</strong> Volume resuscitation (hypovolaemia, haemorrhage), maintenance fluid, drug dilution vehicle.<br>
-  <strong>Composition:</strong> 0.9 g NaCl per 100 mL = 9 g/L = 154 mmol/L sodium, 154 mmol/L chloride (isotonic, osmolality 308 mOsm/L).<br>
-  <strong>Typical adult dose:</strong> 500–1000 mL bolus for fluid resuscitation; 80–125 mL/hour maintenance.</p>
-  <p><strong>Calculation example:</strong> Administer a 20 mL/kg fluid bolus for a shocked patient weighing 75 kg.</p>
-  <pre><code>Volume = 20 mL/kg × 75 kg = 1500 mL (administer rapidly over 10–15 minutes via pressure bag or manual bolus)</code></pre>
-  <p><strong>Caution:</strong> Large volumes (>2 L) can cause hyperchloraemic metabolic acidosis.</p>
-
-  <h3>5.5.6 Lactated Ringer's Solution (Hartmann's Solution)</h3>
-  <p><strong>Indication:</strong> Volume resuscitation, trauma, surgery (more physiological than normal saline).<br>
-  <strong>Composition:</strong> Sodium 131 mmol/L, potassium 5 mmol/L, calcium 2 mmol/L, chloride 111 mmol/L, lactate 29 mmol/L (metabolised to bicarbonate).<br>
-  <strong>Advantages:</strong> Lower chloride, contains buffer, closer to plasma electrolyte composition.</p>
-  <p><strong>Contraindication:</strong> Avoid in hyperkalaemia, severe liver failure (lactate metabolism impaired).</p>
-
-  <h3>5.5.7 Ketamine (Dissociative Anaesthetic/Analgesic)</h3>
-  <p><strong>Indication:</strong> Severe pain (trauma), procedural sedation (fracture reduction, cardioversion), rapid sequence intubation (RSI) in haemodynamically unstable patients.<br>
-  <strong>Standard concentration:</strong> 50 mg/mL (10 mL vial = 500 mg).<br>
-  <strong>Analgesic dose:</strong> 0.2–0.5 mg/kg IV (e.g., 20–40 mg for 80 kg patient).<br>
-  <strong>Sedation dose:</strong> 1–2 mg/kg IV for procedural sedation; 4–5 mg/kg IM if no IV access.</p>
-  <p><strong>Calculation example:</strong> Administer 30 mg IV for analgesia from a 50 mg/mL vial.</p>
-  <pre><code>Volume = 30 mg ÷ 50 mg/mL = 0.6 mL</code></pre>
-  <p><strong>Adverse effects:</strong> Emergence phenomena (hallucinations, agitation — reduced by benzodiazepine pre-medication), hypersalivation (give atropine or glycopyrrolate), transient hypertension/tachycardia. <strong>Contraindication:</strong> Severe hypertension, raised intracranial pressure (relative).</p>
-
-  <h3>5.5.8 Midazolam (Benzodiazepine Sedative)</h3>
-  <p><strong>Indication:</strong> Seizures (status epilepticus), procedural sedation, acute agitation, RSI adjunct.<br>
-  <strong>Standard concentration:</strong> 5 mg/mL (1 mL or 2 mL ampoule).<br>
-  <strong>Seizure dose:</strong> 10 mg IM/IN (intranasal), or 5–10 mg IV (titrated 1–2 mg at a time).<br>
-  <strong>Sedation dose:</strong> 0.05–0.1 mg/kg IV (2.5–5 mg for average adult).</p>
-  <p><strong>Calculation example:</strong> Administer 7.5 mg IV for status epilepticus from a 5 mg/mL ampoule.</p>
-  <pre><code>Volume = 7.5 mg ÷ 5 mg/mL = 1.5 mL</code></pre>
-  <p><strong>Adverse effects:</strong> Respiratory depression (especially with opioids), hypotension. <strong>Reversal agent:</strong> Flumazenil 0.2 mg IV (use cautiously; may precipitate seizures in chronic benzodiazepine users).</p>
-
-  <div class="scenario">
-    <p class="scenario-label">Applied Case Scenario</p>
-    <p><strong>Scene:</strong> You attend a 28-year-old male with a traumatic femur fracture. He is in severe pain (10/10) despite splinting. BP 110/70, HR 105, SpO₂ 97% on room air. You decide to administer fentanyl 1.5 mcg/kg IV. Patient weight 82 kg. You have 100 mcg (2 mL) ampoules of fentanyl.</p>
-    <p><strong>Questions for discussion:</strong></p>
-    <ol>
-      <li>Calculate the required dose in mcg.</li>
-      <li>How many mL do you draw up from the 100 mcg/2 mL ampoule?</li>
-      <li>Over what time period should you administer this dose, and what adverse effects will you monitor for?</li>
-    </ol>
-    <p><strong>Answers:</strong></p>
-    <ol>
-      <li>Dose = 1.5 mcg/kg × 82 kg = <strong>123 mcg</strong>.</li>
-      <li>Concentration = 100 mcg ÷ 2 mL = 50 mcg/mL. Volume = 123 mcg ÷ 50 mcg/mL = <strong>2.46 mL</strong> (draw up 2.5 mL).</li>
-      <li>Administer over 1–2 minutes (slow IV push). Monitor for respiratory depression (RR <10, SpO₂ drop), hypotension, chest wall rigidity. Prepare naloxone and bag-valve-mask.</li>
-    </ol>
+  <div class="exercise">
+    <h4>Exercise 2: Gravity Drip Rate</h4>
+    <p>Order: 1000 mL normal saline over 8 hours. Drop factor: 20 gtt/mL.</p>
+    <div class="answer-input">
+      <label>Enter your answer (gtt/min):</label>
+      <input type="number" class="student-answer" id="ex2-answer" placeholder="Your answer">
+      <button class="check-btn" onclick="checkAnswer(2, 42)">Check Answer</button>
+      <div class="answer-feedback" id="ex2-feedback"></div>
+      <button class="show-answer-btn" onclick="showAnswer(2, 'Time = 8 × 60 = 480 min<br>Drop rate = (1000 × 20) ÷ 480 = 41.67 ≈ 42 gtt/min')">Show Correct Answer</button>
+      <div class="correct-answer" id="ex2-correct"></div>
+    </div>
   </div>
 
-  <h2>5.6 Paediatric Infusion Calculations</h2>
-  <p>Paediatric drug dosing is <strong>always</strong> weight-based. A small calculation error in a neonate or infant can result in a 10-fold overdose. <strong>Golden rules:</strong></p>
-  <ul>
-    <li>Always verify weight in kilograms (if given in grams for neonates, convert: 1 kg = 1000 g).</li>
-    <li>Use a <strong>paediatric resuscitation tape</strong> (e.g. Broselow tape) or smartphone app to cross-check doses.</li>
-    <li>Use dilute concentrations where possible (e.g. dilute 1:1000 adrenaline to 1:10,000 for neonatal resuscitation).</li>
-    <li>Double-check all calculations with a colleague before administration.</li>
-  </ul>
-
-  <p><strong>Example 6 (paediatric):</strong> A 6-month-old infant (7 kg) in status epilepticus requires midazolam 0.15 mg/kg IV. You have 5 mg/mL ampoules.</p>
-  <ol>
-    <li>Dose = 0.15 mg/kg × 7 kg = 1.05 mg (round to 1 mg for practical administration).</li>
-    <li>Volume = 1 mg ÷ 5 mg/mL = <strong>0.2 mL</strong>.</li>
-    <li>Administer slowly over 2–3 minutes; prepare airway equipment (BVM, suction, O₂).</li>
-  </ol>
-
-  <h2>5.7 High-Alert Medications &amp; Error-Prone Situations</h2>
-  <p>The Institute for Safe Medication Practices (ISMP) designates certain drugs as <strong>high-alert medications</strong> — those that carry a heightened risk of causing significant patient harm when used in error. In the prehospital/emergency setting, these include:</p>
-  <ul>
-    <li><strong>Opioids</strong> (morphine, fentanyl) — risk of respiratory arrest.</li>
-    <li><strong>Sedatives/hypnotics</strong> (midazolam, propofol) — risk of apnoea, aspiration.</li>
-    <li><strong>Vasopressors/inotropes</strong> (adrenaline, noradrenaline, dopamine) — risk of severe hypertension, arrhythmias, tissue necrosis (extravasation).</li>
-    <li><strong>Insulin</strong> — risk of severe hypoglycaemia.</li>
-    <li><strong>Anticoagulants</strong> (heparin) — risk of major haemorrhage.</li>
-    <li><strong>Neuromuscular blockers</strong> (suxamethonium, rocuronium) — risk of awareness under paralysis if inadequate sedation, cannot ventilate/cannot intubate.</li>
-  </ul>
-
-  <h3>5.7.1 Common Calculation Errors &amp; How to Prevent Them</h3>
-  <table class="criteria">
-    <tr><th>Error Type</th><th>Example</th><th>Prevention Strategy</th></tr>
-    <tr>
-      <td><strong>Decimal point error</strong></td>
-      <td>0.5 mg misread as 5 mg (10-fold overdose)</td>
-      <td>Write a leading zero (0.5, never .5). Avoid trailing zeros (5 mg, never 5.0 mg). Use bold or underline for decimals in written orders.</td>
-    </tr>
-    <tr>
-      <td><strong>Dose vs. volume confusion</strong></td>
-      <td>Administer 1 mL instead of 1 mg (depends on concentration)</td>
-      <td>Always state both dose (mg) and volume (mL) when verbalising orders. Check ampoule label for concentration before drawing up.</td>
-    </tr>
-    <tr>
-      <td><strong>Incorrect weight</strong></td>
-      <td>Using lbs instead of kg, or pediatric weight in grams instead of kg</td>
-      <td>Confirm weight unit. Convert before calculation. Use Broselow tape for paediatric patients.</td>
-    </tr>
-    <tr>
-      <td><strong>Confusing ratio strengths</strong></td>
-      <td>Using 1:1000 adrenaline IV instead of 1:10,000 (10-fold overdose)</td>
-      <td>Memorise standard concentrations for high-alert drugs. Always dilute if uncertain. Check packaging colour-coding.</td>
-    </tr>
-    <tr>
-      <td><strong>Wrong rate unit</strong></td>
-      <td>Programming 50 mcg/min instead of 50 mL/hour</td>
-      <td>Clarify units before programming pump. Use standardised infusion charts/protocols. Independent double-check for high-alert drugs.</td>
-    </tr>
-  </table>
-
-  <h2>5.8 Safe Infusion Practices: The Six Rights &amp; Beyond</h2>
-  <p>The <strong>Six Rights of Medication Administration</strong> form the foundation of safe practice:</p>
-  <ol>
-    <li><strong>Right Patient</strong> — Verify identity with two identifiers (name, date of birth, ID number, wristband). Ask patient to state their name.</li>
-    <li><strong>Right Drug</strong> — Check drug name, confirm indication. Look-alike/sound-alike drugs (e.g. dopamine vs. dobutamine) require extra vigilance.</li>
-    <li><strong>Right Dose</strong> — Calculate independently. Double-check high-alert drugs with a colleague. Use a calculator; do not rely on mental arithmetic for complex calculations.</li>
-    <li><strong>Right Route</strong> — IV, IM, SC, IO (intraosseous), PO, SL, IN, PR — each has different absorption/onset. Verify the prescribed route matches the formulation (some drugs cause tissue necrosis if given IM/SC instead of IV).</li>
-    <li><strong>Right Time</strong> — Confirm timing (STAT, scheduled, PRN). Some drugs have time-critical windows (e.g. thrombolytics within 4.5 hours of stroke onset).</li>
-    <li><strong>Right Documentation</strong> — Record drug name, dose, route, time, patient response, adverse effects, and your signature/registration number in the patient care record contemporaneously.</li>
-  </ol>
-
-  <h3>5.8.1 Additional Safety Checks for Infusions</h3>
-  <ul>
-    <li><strong>Inspect the solution:</strong> Discard if discoloured, cloudy, or contains particulate matter. Check expiry date.</li>
-    <li><strong>Use the correct giving set/pump:</strong> Macrodrip vs. microdrip; dedicated line for vasopressors; PVC-free tubing for lipid-soluble drugs (propofol, diazepam).</li>
-    <li><strong>Label infusions clearly:</strong> Drug name, concentration, date/time prepared, your initials. Colour-coded labels reduce confusion.</li>
-    <li><strong>Secure IV access:</strong> Extravasation of vasopressors causes tissue necrosis; secure cannula with transparent dressing, check site hourly.</li>
-    <li><strong>Monitor continuously:</strong> Vital signs (BP, HR, RR, SpO₂), conscious level, pain score, fluid balance (input/output chart). Use infusion pump alarms (occlusion, air-in-line, low battery).</li>
-    <li><strong>Avoid multi-drug infusions through a single lumen</strong> unless drugs are known to be compatible (many drugs precipitate or inactivate each other; consult compatibility charts).</li>
-  </ul>
-
-  <div class="callout warning">
-    <strong>Never administer an infusion if you are uncertain about the calculation, concentration, or compatibility.</strong> Clarify with a senior paramedic, pharmacist, or medical control. It is always safer to delay and confirm than to proceed with an incorrect dose.
+  <div class="exercise">
+    <h4>Exercise 3: Weight-Based Dosing</h4>
+    <p>Order: Noradrenaline 0.1 mcg/kg/min for a 70 kg patient. Available: 4 mg in 250 mL D5W.</p>
+    <div class="answer-input">
+      <label>Enter your answer (mL/hour):</label>
+      <input type="number" class="student-answer" id="ex3-answer" placeholder="Your answer" step="0.1">
+      <button class="check-btn" onclick="checkAnswer(3, 26.3)">Check Answer</button>
+      <div class="answer-feedback" id="ex3-feedback"></div>
+      <button class="show-answer-btn" onclick="showAnswer(3, 'Dose/min = 0.1 × 70 = 7 mcg/min<br>Dose/hour = 7 × 60 = 420 mcg/hour = 0.42 mg/hour<br>Concentration = 4 mg ÷ 250 mL = 0.016 mg/mL = 16 mcg/mL<br>Rate = 420 ÷ 16 = 26.25 mL/hour')">Show Correct Answer</button>
+      <div class="correct-answer" id="ex3-correct"></div>
+    </div>
   </div>
 
-  <div class="video-wrap">
-    <iframe src="https://www.youtube-nocookie.com/embed/fDt4ex78-HU" title="IV Medication Administration Nursing | Intravenous Therapy Nursing Skill" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <p class="video-caption">Video: <em>"IV Medication Administration Nursing | Intravenous Therapy"</em> — RegisteredNurseRN demonstrates safe IV medication administration technique.</p>
-
-  <h2>5.9 Infusion Pumps: Types, Programming &amp; Troubleshooting</h2>
-
-  <h3>5.9.1 Types of Infusion Pumps</h3>
-  <ul>
-    <li><strong>Volumetric pumps:</strong> Deliver set mL/hour; most common in ambulances and ICU.</li>
-    <li><strong>Syringe pumps:</strong> Small volume, high precision (0.1 mL/hour increments); used for neonates, high-concentration drugs.</li>
-    <li><strong>Patient-controlled analgesia (PCA) pumps:</strong> Allow patient to self-administer bolus doses within programmed limits (lockout interval).</li>
-    <li><strong>Enteral feeding pumps:</strong> For nasogastric/gastrostomy nutrition (not for IV use).</li>
-  </ul>
-
-  <h3>5.9.2 Programming an Infusion Pump: Step-by-Step</h3>
-  <ol>
-    <li>Prime the infusion line (run fluid through tubing to expel all air).</li>
-    <li>Load the giving set into the pump mechanism (follow manufacturer instructions; peristaltic pumps require tubing to sit in the pump cassette correctly).</li>
-    <li>Enter the infusion rate in <strong>mL/hour</strong> (or mL/min for some older models).</li>
-    <li>Set volume-to-be-infused (VTBI) or leave on free-flow if continuous infusion.</li>
-    <li>Set alarm limits (pressure, air-in-line, low battery).</li>
-    <li>Press START. Verify fluid is flowing by observing drip chamber and checking pump display.</li>
-    <li>Document pump settings in patient care record.</li>
-  </ol>
-
-  <h3>5.9.3 Common Pump Alarms &amp; Troubleshooting</h3>
-  <table class="criteria">
-    <tr><th>Alarm</th><th>Possible Cause</th><th>Action</th></tr>
-    <tr><td><strong>Occlusion</strong></td><td>Kinked tubing, closed clamp, thrombus in cannula, extravasation</td><td>Check line patency, flush cannula, re-site if occluded.</td></tr>
-    <tr><td><strong>Air-in-line</strong></td><td>Air bubble detected in tubing</td><td>Stop pump, clamp line, expel air bubble by tapping tubing and flushing, restart.</td></tr>
-    <tr><td><strong>Low battery</strong></td><td>Pump not plugged in or battery depleted</td><td>Connect to mains power or replace battery immediately.</td></tr>
-    <tr><td><strong>Door open</strong></td><td>Pump door/cassette not closed properly</td><td>Re-seat tubing, close door firmly until it clicks.</td></tr>
-    <tr><td><strong>End of infusion</strong></td><td>VTBI volume delivered</td><td>Assess patient, decide whether to continue or stop infusion, document.</td></tr>
-  </table>
-
-  <h2>5.10 Electrolyte &amp; Glucose Infusions</h2>
-
-  <h3>5.10.1 Potassium Chloride (KCl) Infusion</h3>
-  <p><strong>Indication:</strong> Hypokalaemia (K⁺ <3.5 mmol/L).<br>
-  <strong>Standard preparation:</strong> 40 mmol KCl in 1 L normal saline or 5% dextrose.<br>
-  <strong>Maximum safe rate:</strong> 10 mmol/hour via peripheral IV; 20 mmol/hour via central line (faster rates cause cardiac arrest).<br>
-  <strong>Never give IV push.</strong> KCl is a <strong>high-alert drug</strong>; accidental bolus is fatal.</p>
-
-  <h3>5.10.2 Magnesium Sulfate Infusion</h3>
-  <p><strong>Indication:</strong> Eclampsia, pre-eclampsia, hypomagnesaemia, torsades de pointes VT.<br>
-  <strong>Eclampsia dose:</strong> 4 g IV over 20 minutes (loading dose), then 1 g/hour maintenance.<br>
-  <strong>Standard preparation:</strong> 20 g magnesium sulfate in 500 mL normal saline (40 mg/mL).</p>
-  <p><strong>Calculation example:</strong> Load 4 g over 20 minutes. Concentration 40 mg/mL.</p>
-  <pre><code>Volume = 4000 mg ÷ 40 mg/mL = 100 mL over 20 minutes = 300 mL/hour for 20 min</code></pre>
-  <p><strong>Toxicity signs:</strong> Loss of deep tendon reflexes, respiratory depression (keep calcium gluconate 10% at bedside as antidote).</p>
-
-  <h3>5.10.3 Dextrose (Glucose) Infusions</h3>
-  <p><strong>Indication:</strong> Hypoglycaemia, maintenance fluid (with saline), TPN component.<br>
-  <strong>Concentrations available:</strong></p>
-  <ul>
-    <li><strong>5% dextrose (D5W):</strong> 5 g glucose per 100 mL = 50 g/L. Isotonic in bag, becomes hypotonic once glucose is metabolised. Used for maintenance fluid, drug dilution.</li>
-    <li><strong>10% dextrose (D10W):</strong> 100 g/L. Used for moderate hypoglycaemia (neonates, unable to take oral).</li>
-    <li><strong>50% dextrose (D50W):</strong> 500 g/L = 0.5 g/mL. Hypertonic; used for severe hypoglycaemia in adults (25 g IV bolus = 50 mL of 50% dextrose).</li>
-  </ul>
-  <p><strong>Hypoglycaemia treatment (adult):</strong> 25 g IV dextrose. If using 50% dextrose: 50 mL IV push. If using 10% dextrose: 250 mL IV over 10 minutes.</p>
-
-  <h2>5.11 Blood Product Transfusion</h2>
-  <p>Blood transfusion requires strict adherence to safety protocols to prevent ABO incompatibility (immediate haemolytic transfusion reaction, potentially fatal).</p>
-
-  <h3>5.11.1 Pre-Transfusion Checks</h3>
-  <ol>
-    <li><strong>Two-person verification:</strong> Check patient identity (wristband) and blood unit label (patient name, hospital number, blood group, unit number, expiry date) with a second qualified person.</li>
-    <li><strong>ABO/Rh compatibility:</strong> Verify patient blood group matches unit label. Cross-match sticker must be present.</li>
-    <li><strong>Inspect blood bag:</strong> Check for discolouration, clots, leaks. Blood should be refrigerator-cold (stored at 2–6°C).</li>
-    <li><strong>Baseline observations:</strong> Record BP, HR, RR, temp before starting transfusion.</li>
-  </ol>
-
-  <h3>5.11.2 Transfusion Procedure</h3>
-  <ul>
-    <li>Use a <strong>blood administration set</strong> with 170-micron filter (traps clots/debris).</li>
-    <li><strong>Prime set with 0.9% saline</strong> (never use dextrose; causes haemolysis).</li>
-    <li>Start transfusion slowly (50 mL over first 15 minutes) while observing patient for acute reactions.</li>
-    <li>If no reaction, increase to prescribed rate (1 unit PRBC over 2–4 hours; faster in massive haemorrhage).</li>
-    <li><strong>Monitor every 15 minutes</strong> for first hour, then hourly: BP, HR, RR, temp. Stop immediately if fever, rash, chest pain, dyspnoea, or hypotension develops.</li>
-  </ul>
-
-  <h3>5.11.3 Transfusion Reactions</h3>
-  <table class="criteria">
-    <tr><th>Reaction Type</th><th>Onset</th><th>Signs/Symptoms</th><th>Management</th></tr>
-    <tr>
-      <td><strong>Acute haemolytic</strong></td>
-      <td>Immediate (ABO incompatibility)</td>
-      <td>Fever, rigors, chest/back pain, hypotension, haemoglobinuria (red urine), DIC</td>
-      <td>STOP transfusion immediately. IV fluids, support BP, contact blood bank, return unit for analysis.</td>
-    </tr>
-    <tr>
-      <td><strong>Febrile non-haemolytic</strong></td>
-      <td>During or within 4 hours</td>
-      <td>Fever ≥1°C rise, chills (no haemolysis)</td>
-      <td>Slow/stop transfusion, paracetamol, monitor. If isolated fever with no other signs, may resume slowly after 30 min.</td>
-    </tr>
-    <tr>
-      <td><strong>Allergic/anaphylaxis</strong></td>
-      <td>Minutes to hours</td>
-      <td>Urticaria (mild), or angioedema, bronchospasm, hypotension (severe)</td>
-      <td>STOP transfusion. Mild: antihistamine (chlorphenamine 10 mg IV). Severe: adrenaline 0.5 mg IM, IV fluids, salbutamol.</td>
-    </tr>
-    <tr>
-      <td><strong>TRALI</strong> (Transfusion-Related Acute Lung Injury)</td>
-      <td>Within 6 hours</td>
-      <td>Sudden dyspnoea, hypoxia, bilateral pulmonary infiltrates (non-cardiogenic pulmonary oedema)</td>
-      <td>STOP transfusion. O₂, consider intubation/ventilation, supportive care. Do not give diuretics (worsens outcome).</td>
-    </tr>
-    <tr>
-      <td><strong>TACO</strong> (Transfusion-Associated Circulatory Overload)</td>
-      <td>During or within 6 hours</td>
-      <td>Dyspnoea, hypertension, JVP elevation, pulmonary oedema (cardiogenic)</td>
-      <td>STOP/slow transfusion. Sit patient upright, O₂, diuretic (furosemide 40 mg IV).</td>
-    </tr>
-  </table>
-
-  <h2>5.12 Documentation &amp; Medico-Legal Considerations</h2>
-  <p>Every infusion must be documented in the patient care record with the following details (see Module 1 for full record-keeping standards):</p>
-  <ul>
-    <li>Date and time infusion commenced.</li>
-    <li>Drug name (generic and trade name if relevant), dose, concentration, total volume, diluent used.</li>
-    <li>Route (IV peripheral/central, IO, SC) and cannula/line site (e.g. left antecubital fossa, 18G cannula).</li>
-    <li>Infusion rate (mL/hour or gtt/min) and pump settings (if used).</li>
-    <li>Indication for infusion (e.g. "severe pain post femur fracture", "hypotension unresponsive to fluid bolus").</li>
-    <li>Patient response: vital signs, pain score, conscious level at start and every 15–30 minutes during infusion.</li>
-    <li>Adverse effects (if any) and interventions taken.</li>
-    <li>Time infusion completed or stopped, total volume infused.</li>
-    <li>Signature, name, registration number.</li>
-  </ul>
-
-  <div class="callout legal">
-    <strong>Medico-legal principle:</strong> "If it is not documented, it did not happen." In the event of an adverse outcome, your patient care record is the primary legal document examined by expert witnesses, the HPCSA, and courts. A missing or illegible drug dose, or an uncorrected calculation error in your notes, is indefensible (see <em>PricewaterhouseCoopers Inc v National Potato Co-operative Ltd</em> 2004 (6) SA 66 (SCA), Module 1, on the evidentiary weight of contemporaneous records).
+  <div class="exercise">
+    <h4>Exercise 4: Dopamine Infusion</h4>
+    <p>Order: Dopamine 5 mcg/kg/min for a 65 kg patient. Available: 400 mg dopamine in 250 mL D5W.</p>
+    <div class="answer-input">
+      <label>Enter your answer (mL/hour):</label>
+      <input type="number" class="student-answer" id="ex4-answer" placeholder="Your answer" step="0.1">
+      <button class="check-btn" onclick="checkAnswer(4, 12.2)">Check Answer</button>
+      <div class="answer-feedback" id="ex4-feedback"></div>
+      <button class="show-answer-btn" onclick="showAnswer(4, 'Dose/min = 5 × 65 = 325 mcg/min<br>Dose/hour = 325 × 60 = 19,500 mcg/hour = 19.5 mg/hour<br>Concentration = 400 mg ÷ 250 mL = 1.6 mg/mL = 1600 mcg/mL<br>Rate = 19,500 ÷ 1600 = 12.2 mL/hour')">Show Correct Answer</button>
+      <div class="correct-answer" id="ex4-correct"></div>
+    </div>
   </div>
 
-  <h2>5.13 Literature &amp; Further Reading</h2>
-  <div class="lit-list">
-    <ul>
-      <li>Institute for Safe Medication Practices (ISMP). <em>ISMP List of High-Alert Medications in Acute Care Settings</em> (2024 update).</li>
-      <li>Stassen, W., et al. "Drug calculation competency among South African emergency care providers: a cross-sectional study." <em>African Journal of Emergency Medicine</em> 9(2), 2019.</li>
-      <li>World Health Organization. <em>WHO Guidelines on Hand Hygiene in Health Care</em> and <em>Medication Without Harm: WHO Global Patient Safety Challenge</em> (2017).</li>
-      <li>South African Medicines Formulary (SAMF), 13th edition (2020). South African Medical Association.</li>
-      <li>Emergency Care Society of South Africa (ECSSA). <em>Clinical Practice Guidelines for Emergency Care in South Africa</em> (2023 update) — drug dosing tables, infusion rate charts.</li>
-      <li>Aveyard, H. <em>Doing a Literature Review in Health and Social Care</em> (4th ed., 2019), on evidence-based practice and guideline appraisal.</li>
-      <li>Australian and New Zealand College of Anaesthetists (ANZCA). <em>Guidelines on Sedation and/or Analgesia for Diagnostic and Interventional Medical, Dental or Surgical Procedures</em> (PS09, 2021 edition).</li>
-      <li>Resuscitation Council UK. <em>Advanced Life Support</em> (8th edition, 2021) — cardiac arrest drug algorithms.</li>
-      <li>American Heart Association. <em>Pediatric Advanced Life Support (PALS) Provider Manual</em> (2020) — paediatric drug dosing.</li>
-      <li>National Department of Health, South Africa. <em>Standard Treatment Guidelines and Essential Medicines List for South Africa: Primary Health Care Level</em> (2024 edition).</li>
-    </ul>
+  <div class="exercise">
+    <h4>Exercise 5: Paediatric Calculation</h4>
+    <p>Order: Morphine 0.05 mg/kg for a 20 kg child. Available: Morphine 10 mg/mL.</p>
+    <div class="answer-input">
+      <label>Enter your answer (mL):</label>
+      <input type="number" class="student-answer" id="ex5-answer" placeholder="Your answer" step="0.01">
+      <button class="check-btn" onclick="checkAnswer(5, 0.1)">Check Answer</button>
+      <div class="answer-feedback" id="ex5-feedback"></div>
+      <button class="show-answer-btn" onclick="showAnswer(5, 'Dose = 0.05 × 20 = 1 mg<br>Volume = 1 mg ÷ 10 mg/mL = 0.1 mL')">Show Correct Answer</button>
+      <div class="correct-answer" id="ex5-correct"></div>
+    </div>
   </div>
+</div>
 
-  <h2>5.14 Practical Calculation Exercises</h2>
-  <p>Test your understanding with these practice scenarios. Answers are provided below each question.</p>
+<div class="reflection-box">
+  <h4>Reflective Practice</h4>
+  <p>Consider a recent patient where you administered an IV infusion. Apply the CCT and CDST frameworks: What went well? What would you do differently?</p>
+  <textarea id="reflection" rows="4" placeholder="Enter your reflection here..."></textarea>
+</div>
 
-  <div class="scenario">
-    <p class="scenario-label">Exercise 1: Morphine Bolus</p>
-    <p>Administer 7 mg morphine IV. Available: 10 mg/mL ampoule. How many mL do you draw up?</p>
-    <details>
-      <summary>Show Answer</summary>
-      <p>Volume = 7 mg ÷ 10 mg/mL = <strong>0.7 mL</strong></p>
-    </details>
-  </div>
+<button class="btn" id="completeBtn">Mark Module Complete &amp; Continue &rarr;</button>
 
-  <div class="scenario">
-    <p class="scenario-label">Exercise 2: Adrenaline for Anaphylaxis</p>
-    <p>Patient in anaphylaxis, prescribed 0.5 mg adrenaline IM. You have 1:1000 (1 mg/mL) ampoules. How many mL do you administer?</p>
-    <details>
-      <summary>Show Answer</summary>
-      <p>Volume = 0.5 mg ÷ 1 mg/mL = <strong>0.5 mL</strong> IM into anterolateral thigh</p>
-    </details>
-  </div>
-
-  <div class="scenario">
-    <p class="scenario-label">Exercise 3: Noradrenaline Infusion</p>
-    <p>Prescribed: Noradrenaline 0.15 mcg/kg/min. Patient weight: 58 kg. Preparation: 8 mg noradrenaline in 500 mL 5% dextrose. Calculate infusion rate in mL/hour.</p>
-    <details>
-      <summary>Show Answer</summary>
-      <p>1. Dose per minute: 0.15 mcg/kg/min × 58 kg = 8.7 mcg/min<br>
-      2. Dose per hour: 8.7 × 60 = 522 mcg/hour = 0.522 mg/hour<br>
-      3. Concentration: 8 mg in 500 mL = 0.016 mg/mL<br>
-      4. Infusion rate: 0.522 mg/hour ÷ 0.016 mg/mL = <strong>32.625 mL/hour</strong> (round to 32.6 or 33 mL/hour)</p>
-    </details>
-  </div>
-
-  <div class="scenario">
-    <p class="scenario-label">Exercise 4: Gravity Drip Rate</p>
-    <p>Infuse 1500 mL Hartmann's over 12 hours using a 15 gtt/mL macrodrip set. Calculate drop rate in gtt/min.</p>
-    <details>
-      <summary>Show Answer</summary>
-      <p>1. Time in minutes: 12 hours × 60 = 720 min<br>
-      2. Drop rate: (1500 mL × 15 gtt/mL) ÷ 720 min = 22,500 ÷ 720 = <strong>31.25 gtt/min</strong> (round to 31 gtt/min)</p>
-    </details>
-  </div>
-
-  <div class="scenario">
-    <p class="scenario-label">Exercise 5: Paediatric Ketamine</p>
-    <p>3-year-old child (15 kg) requires procedural sedation for fracture reduction. Prescribed: Ketamine 1.5 mg/kg IV. Available: 50 mg/mL vial. Calculate dose and volume.</p>
-    <details>
-      <summary>Show Answer</summary>
-      <p>1. Dose: 1.5 mg/kg × 15 kg = <strong>22.5 mg</strong><br>
-      2. Volume: 22.5 mg ÷ 50 mg/mL = <strong>0.45 mL</strong></p>
-    </details>
-  </div>
-
-  <div class="reflection-box">
-    <h2>Reflective Practice</h2>
-    <p>Reflect: <em>Recall a clinical scenario where you prepared or administered an IV infusion. What checks did you perform to verify the calculation and concentration? If you identified a near-miss (an error caught before administration), what system factors contributed to it, and what strategies could prevent recurrence? How would you approach a colleague who consistently makes calculation errors or bypasses the double-check process for high-alert drugs?</em></p>
-    <textarea id="reflectionText" placeholder="Write your reflection here (autosaves as you type)..."></textarea>
-    <div class="save-note" id="saveNote"></div>
-  </div>
-
-  <div class="page-actions">
-    <span class="quiz-nav-hint">Use the left-hand navigation to revisit any section.</span>
-    <button class="btn" id="completeBtn">Mark Module Complete &amp; Continue &rarr;</button>
-  </div>
+<script src="assets/content-page.js"></script>
+<script>
+function checkAnswer(num, correct) {
+  var student = parseFloat(document.getElementById('ex' + num + '-answer').value);
+  var feedback = document.getElementById('ex' + num + '-feedback');
+  var tolerance = correct * 0.1;
+  if (Math.abs(student - correct) <= tolerance) {
+    feedback.innerHTML = '<span class="correct">✓ Correct!</span>';
+    feedback.className = 'answer-feedback correct';
+  } else {
+    feedback.innerHTML = '<span class="incorrect">✗ Incorrect. Try again or show the answer.</span>';
+    feedback.className = 'answer-feedback incorrect';
+  }
+}
+function showAnswer(num, answer) {
+  document.getElementById('ex' + num + '-correct').innerHTML = '<div class="answer-reveal">' + answer + '</div>';
+}
+</script>
 
 </div>
-<script src="assets/content-page.js"></script>
-<script>window.ContentPage.init("module5");</script>
 </body>
 </html>
