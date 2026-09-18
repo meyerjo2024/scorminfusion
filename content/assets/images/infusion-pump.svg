@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <!-- Title -->
+  <text x="300" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e3c72">
+    Volumetric Infusion Pump - Components &amp; Operation
+  </text>
+  
+  <!-- Pump body -->
+  <rect x="150" y="80" width="300" height="500" rx="10" fill="#f0f0f0" stroke="#333" stroke-width="3"/>
+  
+  <!-- Display screen -->
+  <rect x="180" y="110" width="240" height="120" fill="#1a1a1a" stroke="#555" stroke-width="2"/>
+  <text x="300" y="150" font-size="32" font-weight="bold" text-anchor="middle" fill="#0f0">125.0</text>
+  <text x="300" y="180" font-size="16" text-anchor="middle" fill="#0f0">mL/hour</text>
+  <text x="220" y="210" font-size="14" fill="#0f0">VTBI: 1000 mL</text>
+  <text x="340" y="210" font-size="14" fill="#0f0">⚡ 95%</text>
+  
+  <!-- Control buttons -->
+  <g transform="translate(200, 260)">
+    <rect x="0" y="0" width="60" height="35" rx="5" fill="#4caf50" stroke="#333" stroke-width="1"/>
+    <text x="30" y="23" font-size="12" font-weight="bold" text-anchor="middle" fill="#fff">START</text>
+  </g>
+  
+  <g transform="translate(270, 260)">
+    <rect x="0" y="0" width="60" height="35" rx="5" fill="#ff9800" stroke="#333" stroke-width="1"/>
+    <text x="30" y="23" font-size="12" font-weight="bold" text-anchor="middle" fill="#fff">PAUSE</text>
+  </g>
+  
+  <g transform="translate(340, 260)">
+    <rect x="0" y="0" width="60" height="35" rx="5" fill="#d32f2f" stroke="#333" stroke-width="1"/>
+    <text x="30" y="23" font-size="12" font-weight="bold" text-anchor="middle" fill="#fff">STOP</text>
+  </g>
+  
+  <!-- Rate adjustment -->
+  <g transform="translate(200, 310)">
+    <text x="0" y="15" font-size="14" font-weight="bold">Rate Adjustment:</text>
+    <circle cx="100" cy="30" r="20" fill="#2196f3" stroke="#333" stroke-width="2"/>
+    <text x="100" y="37" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">▲</text>
+    <circle cx="140" cy="30" r="20" fill="#2196f3" stroke="#333" stroke-width="2"/>
+    <text x="140" y="38" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">▼</text>
+  </g>
+  
+  <!-- Tubing door/cassette -->
+  <rect x="180" y="380" width="100" height="180" fill="#e0e0e0" stroke="#333" stroke-width="2"/>
+  <text x="230" y="470" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Tubing</text>
+  <text x="230" y="485" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Cassette</text>
+  <circle cx="270" cy="470" r="5" fill="#333"/>
+  <text x="280" y="475" font-size="10">Door</text>
+  
+  <!-- IV line diagram -->
+  <path d="M 230 560 L 230 650" stroke="#87ceeb" stroke-width="8" fill="none"/>
+  <circle cx="230" cy="650" r="10" fill="#87ceeb" stroke="#333" stroke-width="2"/>
+  <text x="250" cy="655" font-size="12">To Patient</text>
+  
+  <!-- Alarm indicators -->
+  <g transform="translate(300, 380)">
+    <circle cx="60" cy="20" r="12" fill="#d32f2f" stroke="#333" stroke-width="1"/>
+    <text x="80" y="25" font-size="11">Occlusion</text>
+    
+    <circle cx="60" cy="50" r="12" fill="#ff9800" stroke="#333" stroke-width="1"/>
+    <text x="80" y="55" font-size="11">Air-in-Line</text>
+    
+    <circle cx="60" cy="80" r="12" fill="#ffeb3b" stroke="#333" stroke-width="1"/>
+    <text x="80" y="85" font-size="11">Low Battery</text>
+    
+    <circle cx="60" cy="110" r="12" fill="#2196f3" stroke="#333" stroke-width="1"/>
+    <text x="80" y="115" font-size="11">Door Open</text>
+    
+    <circle cx="60" cy="140" r="12" fill="#9c27b0" stroke="#333" stroke-width="1"/>
+    <text x="80" y="145" font-size="11">VTBI Complete</text>
+  </g>
+  
+  <!-- Programming steps -->
+  <g transform="translate(50, 620)">
+    <text x="0" y="0" font-size="16" font-weight="bold" fill="#1e3c72">Programming Steps:</text>
+    <text x="0" y="25" font-size="12">1. Prime tubing (remove all air)</text>
+    <text x="0" y="45" font-size="12">2. Load cassette into pump door</text>
+    <text x="0" y="65" font-size="12">3. Close door firmly (click)</text>
+    <text x="0" y="85" font-size="12">4. Enter rate (mL/hour)</text>
+    <text x="0" y="105" font-size="12">5. Set VTBI (optional)</text>
+    <text x="0" y="125" font-size="12">6. Press START</text>
+    <text x="0" y="145" font-size="12">7. Verify fluid flowing (drip chamber)</text>
+  </g>
+  
+  <!-- Power source -->
+  <rect x="180" y="590" width="80" height="30" fill="#333" stroke="#000" stroke-width="2"/>
+  <text x="220" y="610" font-size="10" font-weight="bold" text-anchor="middle" fill="#fff">AC/Battery</text>
+</svg>

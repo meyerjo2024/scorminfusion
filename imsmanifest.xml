@@ -29,14 +29,17 @@
     <resource identifier="RES-COURSE" type="webcontent" adlcp:scormtype="sco" href="content/index.html">
       <file href="content/index.html" />
       <file href="content/module1.html" />
+      <file href="content/module2-interactive.html" />
       <file href="content/assessment.html" />
       <file href="content/assets/style.css" />
       <file href="content/assets/scorm-api.js" />
       <file href="content/assets/app.js" />
       <file href="content/assets/content-page.js" />
       <file href="content/assets/quiz-data.js" />
-      <file href="content/assets/images/iv-anatomy.png" />
-      <file href="content/assets/images/infusion-pump.png" />
+      <file href="content/assets/calculator.js" />
+      <file href="content/assets/syringe-simulator.js" />
+      <file href="content/assets/images/iv-anatomy.svg" />
+      <file href="content/assets/images/infusion-pump.svg" />
       <file href="content/assets/images/drug-concentrations.svg" />
     </resource>
   </resources>

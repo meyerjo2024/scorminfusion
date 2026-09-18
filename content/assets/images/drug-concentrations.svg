@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <!-- Title -->
+  <text x="500" y="30" font-size="26" font-weight="bold" text-anchor="middle" fill="#1e3c72">
+    Drug Concentration Conversion Reference Chart
+  </text>
+  
+  <!-- mg/mL Section -->
+  <g transform="translate(50, 80)">
+    <rect x="0" y="0" width="280" height="200" fill="#e3f2fd" stroke="#2a5298" stroke-width="2" rx="5"/>
+    <text x="140" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e3c72">mg/mL (Milligrams per mL)</text>
+    <text x="20" y="60" font-size="13">Standard unit for most IV drugs</text>
+    <text x="20" y="85" font-size="13" font-weight="bold">Examples:</text>
+    <text x="30" y="105" font-size="12">• Morphine: 10 mg/mL</text>
+    <text x="30" y="125" font-size="12">• Midazolam: 5 mg/mL</text>
+    <text x="30" y="145" font-size="12">• Ketamine: 50 mg/mL</text>
+    <text x="30" y="165" font-size="12">• Adrenaline 1:1000 = 1 mg/mL</text>
+  </g>
+  
+  <!-- mcg/mL Section -->
+  <g transform="translate(360, 80)">
+    <rect x="0" y="0" width="280" height="200" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" rx="5"/>
+    <text x="140" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#7b1fa2">mcg/mL (Micrograms per mL)</text>
+    <text x="20" y="60" font-size="13">1 mcg = 0.001 mg</text>
+    <text x="20" y="85" font-size="13" font-weight="bold">Examples:</text>
+    <text x="30" y="105" font-size="12">• Fentanyl: 50 mcg/mL</text>
+    <text x="30" y="125" font-size="12">• Adrenaline 1:10,000 = 100 mcg/mL</text>
+    <text x="20" y="150" font-size="13" font-weight="bold">Conversion:</text>
+    <text x="30" y="170" font-size="12">50 mcg/mL = 0.05 mg/mL</text>
+  </g>
+  
+  <!-- % w/v Section -->
+  <g transform="translate(670, 80)">
+    <rect x="0" y="0" width="280" height="200" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
+    <text x="140" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#e65100">% w/v (Weight/Volume %)</text>
+    <text x="20" y="60" font-size="13">Grams of drug per 100 mL</text>
+    <text x="20" y="85" font-size="13" font-weight="bold">Examples:</text>
+    <text x="30" y="105" font-size="12">• 0.9% saline = 0.9 g/100mL = 9 g/L</text>
+    <text x="30" y="125" font-size="12">• 5% dextrose = 5 g/100mL = 50 g/L</text>
+    <text x="20" y="150" font-size="13" font-weight="bold">Conversion:</text>
+    <text x="30" y="170" font-size="12">1% = 10 mg/mL</text>
+  </g>
+  
+  <!-- Ratio Strength Section -->
+  <g transform="translate(50, 310)">
+    <rect x="0" y="0" width="590" height="180" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="5"/>
+    <text x="295" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#c62828">Ratio Strength (1:X)</text>
+    <text x="20" y="60" font-size="13">1:X means 1 gram in X mL</text>
+    <text x="20" y="90" font-size="14" font-weight="bold">Critical for Adrenaline:</text>
+    
+    <rect x="40" y="100" width="250" height="60" fill="#c8e6c9" stroke="#4caf50" stroke-width="2" rx="3"/>
+    <text x="165" y="125" font-size="13" font-weight="bold" text-anchor="middle">1:1000 = 1 mg/mL</text>
+    <text x="165" y="145" font-size="12" text-anchor="middle">For IM (Anaphylaxis): 0.5 mg = 0.5 mL</text>
+    
+    <rect x="310" y="100" width="250" height="60" fill="#fff9c4" stroke="#fbc02d" stroke-width="2" rx="3"/>
+    <text x="435" y="125" font-size="13" font-weight="bold" text-anchor="middle">1:10,000 = 0.1 mg/mL</text>
+    <text x="435" y="145" font-size="12" text-anchor="middle">For IV (Cardiac arrest): 1 mg = 10 mL</text>
+  </g>
+  
+  <!-- Conversion Table -->
+  <g transform="translate(670, 310)">
+    <rect x="0" y="0" width="280" height="180" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="5"/>
+    <text x="140" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#2e7d32">Quick Conversions</text>
+    
+    <text x="20" y="60" font-size="12" font-weight="bold">mg → mcg: multiply by 1000</text>
+    <text x="30" y="80" font-size="11">5 mg = 5000 mcg</text>
+    
+    <text x="20" y="105" font-size="12" font-weight="bold">mcg → mg: divide by 1000</text>
+    <text x="30" y="125" font-size="11">500 mcg = 0.5 mg</text>
+    
+    <text x="20" y="150" font-size="12" font-weight="bold">g → mg: multiply by 1000</text>
+    <text x="30" y="170" font-size="11">1 g = 1000 mg</text>
+  </g>
+  
+  <!-- Worked Example -->
+  <g transform="translate(50, 520)">
+    <rect x="0" y="0" width="900" height="150" fill="#fafafa" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="450" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e3c72">Worked Example: Morphine Calculation</text>
+    
+    <text x="20" y="60" font-size="14" font-weight="bold">Question:</text>
+    <text x="30" y="80" font-size="13">Administer 8 mg morphine IV. Available: 10 mg/mL ampoule. Calculate volume.</text>
+    
+    <text x="20" y="110" font-size="14" font-weight="bold" fill="#2e7d32">Solution:</text>
+    <text x="30" y="130" font-size="13" fill="#2e7d32">Volume (mL) = Dose (mg) ÷ Concentration (mg/mL) = 8 mg ÷ 10 mg/mL = <tspan font-weight="bold">0.8 mL</tspan></text>
+  </g>
+</svg>

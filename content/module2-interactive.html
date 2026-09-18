@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Module 2: Interactive Drug Calculators &amp; Syringe Driver Simulator</title>
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+.calculator-section {
+  background: #f9f9f9;
+  border: 2px solid #2a5298;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.calc-form {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.calc-input-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.calc-input-group label {
+  min-width: 150px;
+  font-weight: 600;
+}
+
+.calc-input-group input,
+.calc-input-group select {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.calc-button {
+  background: linear-gradient(90deg, #2a5298, #1e3c72);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calc-button:hover {
+  background: linear-gradient(90deg, #1e3c72, #0d1f3d);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calc-result {
+  background: #e3f2fd;
+  border-left: 4px solid #2a5298;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  display: none;
+}
+
+.calc-result.show {
+  display: block;
+}
+
+.calc-result.error {
+  background: #ffebee;
+  border-left-color: #d32f2f;
+}
+
+.calc-result h4 {
+  margin: 0 0 12px 0;
+  color: #1e3c72;
+}
+
+.calc-result .result-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2a5298;
+  margin: 8px 0;
+}
+
+.calc-result .steps {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #ccc;
+}
+
+.calc-result .steps ol {
+  margin: 8px 0 0 20px;
+}
+
+.calc-result .steps li {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.syringe-simulator {
+  background: #fafafa;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.simulator-canvas {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  display: block;
+  margin: 16px auto;
+}
+
+.syringe-controls {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.control-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.control-group label {
+  font-weight: 600;
+  min-width: 150px;
+}
+
+.control-group input,
+.control-group select {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.btn-sim {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-start {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-start:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.btn-pause {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-pause:hover:not(:disabled) {
+  background: #f57c00;
+}
+
+.btn-stop {
+  background: #d32f2f;
+  color: white;
+}
+
+.btn-stop:hover:not(:disabled) {
+  background: #b71c1c;
+}
+
+.btn-alarm {
+  background: #9c27b0;
+  color: white;
+}
+
+.btn-alarm:hover {
+  background: #7b1fa2;
+}
+
+.btn-sim:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.sim-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+  padding: 16px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.display-item {
+  font-size: 14px;
+}
+
+.display-item strong {
+  display: block;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.display-item span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a5298;
+}
+
+.practice-scenario {
+  background: #fff3e0;
+  border: 2px solid #ff9800;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 24px 0;
+}
+
+.practice-scenario h3 {
+  color: #e65100;
+  margin-top: 0;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <span class="meta-bar">Module 2: Interactive Calculators &amp; Simulator · 60 minutes · Hands-on Practice</span>
+  <h1>Module 2: Interactive Drug Calculators &amp; Syringe Driver Simulator</h1>
+
+  <h2>2.1 Interactive Drug Dose Calculator</h2>
+  <p>Use this calculator to practice dose-to-volume conversions. Enter the desired dose, drug concentration, and units to calculate the volume to draw up.</p>
+
+  <div class="calculator-section">
+    <h3>Volume Calculation: Dose ÷ Concentration</h3>
+    <p><strong>Formula:</strong> Volume (mL) = Desired Dose ÷ Concentration</p>
+    
+    <div class="calc-form">
+      <div class="calc-input-group">
+        <label for="calcDose">Desired Dose:</label>
+        <input type="number" id="calcDose" placeholder="e.g., 8" step="0.01" />
+        <select id="calcDoseUnit">
+          <option value="mg">mg</option>
+          <option value="mcg">mcg</option>
+          <option value="g">g</option>
+        </select>
+      </div>
+
+      <div class="calc-input-group">
+        <label for="calcConc">Drug Concentration:</label>
+        <input type="number" id="calcConc" placeholder="e.g., 10" step="0.01" />
+        <select id="calcConcUnit">
+          <option value="mg/mL">mg/mL</option>
+          <option value="mcg/mL">mcg/mL</option>
+          <option value="g/mL">g/mL</option>
+          <option value="%">% (w/v)</option>
+          <option value="1:1000">1:1000</option>
+          <option value="1:10000">1:10,000</option>
+        </select>
+      </div>
+
+      <button class="calc-button" onclick="calculateVolume()">Calculate Volume</button>
+    </div>
+
+    <div id="volumeResult" class="calc-result"></div>
+  </div>
+
+  <h2>2.2 Infusion Rate Calculator</h2>
+  <p>Calculate the infusion rate (mL/hour) for a volumetric pump when you know the dose required and the drug concentration in the bag.</p>
+
+  <div class="calculator-section">
+    <h3>Infusion Rate: Dose per Time ÷ Concentration</h3>
+    
+    <div class="calc-form">
+      <div class="calc-input-group">
+        <label for="infusionDose">Dose Required:</label>
+        <input type="number" id="infusionDose" placeholder="e.g., 5" step="0.01" />
+        <select id="infusionDoseUnit">
+          <option value="mg/hour">mg/hour</option>
+          <option value="mg/min">mg/min</option>
+          <option value="mcg/hour">mcg/hour</option>
+          <option value="mcg/min">mcg/min</option>
+        </select>
+      </div>
+
+      <div class="calc-input-group">
+        <label for="infusionDrugAmount">Drug Amount in Bag:</label>
+        <input type="number" id="infusionDrugAmount" placeholder="e.g., 200" step="0.01" />
+        <select id="infusionDrugUnit">
+          <option value="mg">mg</option>
+          <option value="mcg">mcg</option>
+          <option value="g">g</option>
+        </select>
+      </div>
+
+      <div class="calc-input-group">
+        <label for="infusionVolume">Total Volume:</label>
+        <input type="number" id="infusionVolume" placeholder="e.g., 250" step="1" />
+        <select id="infusionVolumeUnit">
+          <option value="mL">mL</option>
+          <option value="L">L</option>
+        </select>
+      </div>
+
+      <button class="calc-button" onclick="calculateInfusionRate()">Calculate Infusion Rate</button>
+    </div>
+
+    <div id="infusionResult" class="calc-result"></div>
+  </div>
+
+  <h2>2.3 Weight-Based Infusion Calculator</h2>
+  <p>Calculate infusion rates for weight-based dosing (e.g., dopamine, noradrenaline). Common in critical care and emergency medicine.</p>
+
+  <div class="calculator-section">
+    <h3>Weight-Based Dosing (mcg/kg/min)</h3>
+    
+    <div class="calc-form">
+      <div class="calc-input-group">
+        <label for="wbDose">Dose Prescribed:</label>
+        <input type="number" id="wbDose" placeholder="e.g., 5" step="0.1" />
+        <select id="wbDoseUnit">
+          <option value="mcg/kg/min">mcg/kg/min</option>
+          <option value="mg/kg/min">mg/kg/min</option>
+        </select>
+      </div>
+
+      <div class="calc-input-group">
+        <label for="wbWeight">Patient Weight (kg):</label>
+        <input type="number" id="wbWeight" placeholder="e.g., 70" step="0.1" />
+      </div>
+
+      <div class="calc-input-group">
+        <label for="wbDrugAmount">Drug Amount in Bag:</label>
+        <input type="number" id="wbDrugAmount" placeholder="e.g., 200" step="0.01" />
+        <select id="wbDrugUnit">
+          <option value="mg">mg</option>
+          <option value="mcg">mcg</option>
+          <option value="g">g</option>
+        </select>
+      </div>
+
+      <div class="calc-input-group">
+        <label for="wbVolume">Total Volume (mL):</label>
+        <input type="number" id="wbVolume" placeholder="e.g., 250" step="1" />
+      </div>
+
+      <button class="calc-button" onclick="calculateWeightBased()">Calculate Infusion Rate</button>
+    </div>
+
+    <div id="wbResult" class="calc-result"></div>
+  </div>
+
+  <h2>2.4 Gravity Drip Rate Calculator</h2>
+  <p>Calculate the drop rate (gtt/min) for gravity drip infusions when a pump is not available.</p>
+
+  <div class="calculator-section">
+    <h3>Gravity Drip: (Volume × Drop Factor) ÷ Time</h3>
+    
+    <div class="calc-form">
+      <div class="calc-input-group">
+        <label for="gravityVolume">Volume to Infuse:</label>
+        <input type="number" id="gravityVolume" placeholder="e.g., 1000" step="1" />
+        <select id="gravityVolumeUnit">
+          <option value="mL">mL</option>
+          <option value="L">L</option>
+        </select>
+      </div>
+
+      <div class="calc-input-group">
+        <label for="gravityTime">Infusion Time:</label>
+        <input type="number" id="gravityTime" placeholder="e.g., 8" step="0.1" />
+        <select id="gravityTimeUnit">
+          <option value="hours">hours</option>
+          <option value="minutes">minutes</option>
+        </select>
+      </div>
+
+      <div class="calc-input-group">
+        <label for="gravityDropFactor">Drop Factor (gtt/mL):</label>
+        <select id="gravityDropFactor">
+          <option value="10">10 gtt/mL (Macrodrip)</option>
+          <option value="15">15 gtt/mL (Macrodrip)</option>
+          <option value="20">20 gtt/mL (Macrodrip)</option>
+          <option value="60">60 gtt/mL (Microdrip)</option>
+        </select>
+      </div>
+
+      <button class="calc-button" onclick="calculateGravityDrip()">Calculate Drop Rate</button>
+    </div>
+
+    <div id="gravityResult" class="calc-result"></div>
+  </div>
+
+  <h2>2.5 Interactive Syringe Driver Simulator</h2>
+  <p>This interactive simulator demonstrates how a syringe driver operates in real-time. You can start, pause, and stop the infusion, adjust the rate, simulate an occlusion alarm, and watch the syringe plunger move as medication is delivered.</p>
+
+  <div class="syringe-simulator">
+    <h3>🔬 Real-Time Syringe Driver Simulation</h3>
+    <p><strong>Instructions:</strong> Select your drug and infusion rate, then click "Start Infusion" to begin. Watch the plunger move and the volume decrease in real-time. You can pause/resume, simulate an occlusion alarm, or stop and reset the simulation.</p>
+
+    <canvas id="syringeCanvas" class="simulator-canvas" width="550" height="180"></canvas>
+    <div id="syringeControls"></div>
+  </div>
+
+  <h2>2.6 Additional Practice Scenarios</h2>
+
+  <div class="practice-scenario">
+    <h3>Scenario 1: Morphine for Trauma Pain</h3>
+    <p><strong>Patient:</strong> 32-year-old male, motorcycle accident, femur fracture. Weight 78 kg. Pain score 9/10.</p>
+    <p><strong>Order:</strong> Morphine 0.1 mg/kg IV bolus.</p>
+    <p><strong>Available:</strong> Morphine 10 mg/mL ampoules.</p>
+    <p><strong>Calculate:</strong></p>
+    <ol>
+      <li>Total dose required (mg)</li>
+      <li>Volume to draw up (mL)</li>
+      <li>Administration time (over 2-3 minutes)</li>
+    </ol>
+    <details>
+      <summary><strong>Show Solution</strong></summary>
+      <p><strong>1. Dose:</strong> 0.1 mg/kg × 78 kg = <strong>7.8 mg</strong> (round to 8 mg for practical administration)</p>
+      <p><strong>2. Volume:</strong> 8 mg ÷ 10 mg/mL = <strong>0.8 mL</strong></p>
+      <p><strong>3. Administration:</strong> Give 0.8 mL slowly over 2-3 minutes IV push. Monitor for respiratory depression (RR <10), hypotension, and sedation. Have naloxone 0.4 mg ready as reversal agent.</p>
+    </details>
+  </div>
+
+  <div class="practice-scenario">
+    <h3>Scenario 2: Noradrenaline Infusion for Septic Shock</h3>
+    <p><strong>Patient:</strong> 55-year-old female, septic shock, BP 75/40 despite 2L fluid resuscitation. Weight 62 kg.</p>
+    <p><strong>Order:</strong> Noradrenaline 0.1 mcg/kg/min IV infusion.</p>
+    <p><strong>Preparation:</strong> 4 mg noradrenaline in 250 mL 5% dextrose.</p>
+    <p><strong>Calculate:</strong> Infusion rate in mL/hour.</p>
+    <details>
+      <summary><strong>Show Solution</strong></summary>
+      <p><strong>Step 1:</strong> Dose per minute = 0.1 mcg/kg/min × 62 kg = 6.2 mcg/min</p>
+      <p><strong>Step 2:</strong> Dose per hour = 6.2 mcg/min × 60 = 372 mcg/hour = 0.372 mg/hour</p>
+      <p><strong>Step 3:</strong> Concentration = 4 mg ÷ 250 mL = 0.016 mg/mL</p>
+      <p><strong>Step 4:</strong> Infusion rate = 0.372 mg/hour ÷ 0.016 mg/mL = <strong>23.25 mL/hour</strong> (round to 23 mL/hour)</p>
+      <p><strong>Monitoring:</strong> Titrate to MAP >65 mmHg. Check BP every 5 minutes. Watch for arrhythmias, extravasation (causes tissue necrosis). Use central line if available.</p>
+    </details>
+  </div>
+
+  <div class="practice-scenario">
+    <h3>Scenario 3: Paediatric Midazolam for Status Epilepticus</h3>
+    <p><strong>Patient:</strong> 4-year-old child, continuous seizures for 8 minutes. Weight 18 kg.</p>
+    <p><strong>Order:</strong> Midazolam 0.15 mg/kg IV.</p>
+    <p><strong>Available:</strong> Midazolam 5 mg/mL ampoules.</p>
+    <p><strong>Calculate:</strong> Dose and volume to administer.</p>
+    <details>
+      <summary><strong>Show Solution</strong></summary>
+      <p><strong>Dose:</strong> 0.15 mg/kg × 18 kg = <strong>2.7 mg</strong></p>
+      <p><strong>Volume:</strong> 2.7 mg ÷ 5 mg/mL = <strong>0.54 mL</strong> (round to 0.5 mL)</p>
+      <p><strong>Administration:</strong> Give 0.5 mL slowly over 2-3 minutes IV. Monitor respiratory rate, SpO₂, and BP. Prepare bag-valve-mask and suction. Have flumazenil available but use cautiously (may precipitate seizures if child is on chronic benzodiazepines).</p>
+      <p><strong>Alternative route:</strong> If no IV access: 10 mg IM or 10 mg intranasal (5 mg per nostril using MAD device).</p>
+    </details>
+  </div>
+
+  <div class="practice-scenario">
+    <h3>Scenario 4: Adrenaline 1:1000 to 1:10,000 Dilution</h3>
+    <p><strong>Patient:</strong> 68-year-old in cardiac arrest (VF/pVT), 3rd shock delivered, still in VF.</p>
+    <p><strong>Order:</strong> Adrenaline 1 mg IV (1:10,000 concentration).</p>
+    <p><strong>Available:</strong> 1:1000 adrenaline (1 mg/mL) ampoules only.</p>
+    <p><strong>Task:</strong> Prepare the correct dilution.</p>
+    <details>
+      <summary><strong>Show Solution</strong></summary>
+      <p><strong>Step 1:</strong> Draw up 1 mL of 1:1000 adrenaline (= 1 mg).</p>
+      <p><strong>Step 2:</strong> Add 9 mL normal saline to the syringe (total 10 mL).</p>
+      <p><strong>Step 3:</strong> This gives you 1 mg in 10 mL = 0.1 mg/mL = 1:10,000 concentration.</p>
+      <p><strong>Step 4:</strong> Administer the entire 10 mL IV push during CPR.</p>
+      <p><strong>Repeat:</strong> Every 3-5 minutes during ongoing CPR if still in VF/pVT.</p>
+      <p><strong>Warning:</strong> Never give 1:1000 adrenaline IV without dilution—this is a 10-fold overdose and causes severe hypertension, arrhythmias, and myocardial ischemia.</p>
+    </details>
+  </div>
+
+  <div class="practice-scenario">
+    <h3>Scenario 5: Fluid Bolus for Hypovolaemic Shock</h3>
+    <p><strong>Patient:</strong> 25-year-old male, penetrating chest trauma, BP 80/50, HR 130, cool peripheries. Weight 85 kg.</p>
+    <p><strong>Order:</strong> 20 mL/kg fluid bolus (normal saline) stat.</p>
+    <p><strong>Calculate:</strong> Total volume and administration strategy.</p>
+    <details>
+      <summary><strong>Show Solution</strong></summary>
+      <p><strong>Volume:</strong> 20 mL/kg × 85 kg = <strong>1700 mL</strong></p>
+      <p><strong>Administration:</strong> Administer rapidly over 10-15 minutes using:</p>
+      <ul>
+        <li>Two large-bore IV cannulas (14G or 16G)</li>
+        <li>Pressure bag or manual push with 3-way tap</li>
+        <li>Blood tubing if available (wider bore)</li>
+      </ul>
+      <p><strong>Reassessment:</strong> After bolus, recheck BP, HR, capillary refill, lactate. If still shocked, repeat 20 mL/kg bolus and prepare for blood transfusion (activate massive transfusion protocol if available).</p>
+      <p><strong>Caution:</strong> Avoid excessive crystalloid in penetrating trauma with uncontrolled bleeding ("permissive hypotension" strategy: target SBP 80-90 mmHg until haemostasis achieved).</p>
+    </details>
+  </div>
+
+  <div class="reflection-box">
+    <h2>Reflective Practice</h2>
+    <p>Reflect: <em>Use the interactive calculators above to solve the practice scenarios. Which calculation method do you find most challenging? Have you encountered situations where having a calculator would have prevented an error or saved time? How can you integrate systematic calculation checks into your clinical workflow?</em></p>
+    <textarea id="reflectionText" placeholder="Write your reflection here (autosaves as you type)..."></textarea>
+    <div class="save-note" id="saveNote"></div>
+  </div>
+
+  <div class="page-actions">
+    <span class="quiz-nav-hint">Practice with the calculators and simulator before moving to the assessment.</span>
+    <button class="btn" id="completeBtn">Mark Module 2 Complete &amp; Continue &rarr;</button>
+  </div>
+
+</div>
+
+<script src="assets/calculator.js"></script>
+<script src="assets/syringe-simulator.js"></script>
+<script src="assets/content-page.js"></script>
+<script>
+// Volume calculator
+function calculateVolume() {
+  var dose = parseFloat(document.getElementById("calcDose").value);
+  var doseUnit = document.getElementById("calcDoseUnit").value;
+  var conc = parseFloat(document.getElementById("calcConc").value);
+  var concUnit = document.getElementById("calcConcUnit").value;
+
+  var result = window.DrugCalculator.calculateVolume(dose, conc, doseUnit, concUnit);
+  var resultDiv = document.getElementById("volumeResult");
+
+  if (result.valid) {
+    resultDiv.className = "calc-result show";
+    resultDiv.innerHTML = 
+      '<h4>✅ Calculation Result</h4>' +
+      '<div class="result-value">' + result.volume + ' ' + result.volumeUnit + '</div>' +
+      '<div class="steps"><strong>Step-by-Step Solution:</strong><ol>' +
+      result.steps.map(function(s) { return '<li>' + s + '</li>'; }).join('') +
+      '</ol></div>';
+  } else {
+    resultDiv.className = "calc-result show error";
+    resultDiv.innerHTML = '<h4>❌ Error</h4><p>' + result.error + '</p>';
+  }
+}
+
+// Infusion rate calculator
+function calculateInfusionRate() {
+  var dose = parseFloat(document.getElementById("infusionDose").value);
+  var doseUnit = document.getElementById("infusionDoseUnit").value;
+  var drugAmount = parseFloat(document.getElementById("infusionDrugAmount").value);
+  var drugUnit = document.getElementById("infusionDrugUnit").value;
+  var volume = parseFloat(document.getElementById("infusionVolume").value);
+  var volumeUnit = document.getElementById("infusionVolumeUnit").value;
+
+  var timeUnit = doseUnit.split("/")[1];
+  var result = window.DrugCalculator.calculateInfusionRate(dose, doseUnit, timeUnit, drugAmount, drugUnit, volume, volumeUnit);
+  var resultDiv = document.getElementById("infusionResult");
+
+  if (result.valid) {
+    resultDiv.className = "calc-result show";
+    resultDiv.innerHTML = 
+      '<h4>✅ Calculation Result</h4>' +
+      '<div class="result-value">' + result.rate + ' ' + result.rateUnit + '</div>' +
+      '<p><strong>Solution Concentration:</strong> ' + result.concentration + ' ' + result.concentrationUnit + '</p>' +
+      '<div class="steps"><strong>Step-by-Step Solution:</strong><ol>' +
+      result.steps.map(function(s) { return '<li>' + s + '</li>'; }).join('') +
+      '</ol></div>';
+  } else {
+    resultDiv.className = "calc-result show error";
+    resultDiv.innerHTML = '<h4>❌ Error</h4><p>' + result.error + '</p>';
+  }
+}
+
+// Weight-based calculator
+function calculateWeightBased() {
+  var dose = parseFloat(document.getElementById("wbDose").value);
+  var doseUnit = document.getElementById("wbDoseUnit").value;
+  var weight = parseFloat(document.getElementById("wbWeight").value);
+  var drugAmount = parseFloat(document.getElementById("wbDrugAmount").value);
+  var drugUnit = document.getElementById("wbDrugUnit").value;
+  var volume = parseFloat(document.getElementById("wbVolume").value);
+
+  var result = window.DrugCalculator.calculateWeightBasedInfusion(dose, doseUnit, weight, drugAmount, drugUnit, volume);
+  var resultDiv = document.getElementById("wbResult");
+
+  if (result.valid) {
+    resultDiv.className = "calc-result show";
+    resultDiv.innerHTML = 
+      '<h4>✅ Calculation Result</h4>' +
+      '<div class="result-value">' + result.rate + ' ' + result.rateUnit + '</div>' +
+      '<p><strong>Total Dose:</strong> ' + result.totalDosePerMin + ' ' + (doseUnit.includes("mcg") ? "mcg" : "mg") + '/min (' + result.totalDosePerHour + ' mg/hour)</p>' +
+      '<p><strong>Solution Concentration:</strong> ' + result.concentration + ' mg/mL</p>' +
+      '<div class="steps"><strong>Step-by-Step Solution:</strong><ol>' +
+      result.steps.map(function(s) { return '<li>' + s + '</li>'; }).join('') +
+      '</ol></div>';
+  } else {
+    resultDiv.className = "calc-result show error";
+    resultDiv.innerHTML = '<h4>❌ Error</h4><p>' + result.error + '</p>';
+  }
+}
+
+// Gravity drip calculator
+function calculateGravityDrip() {
+  var volume = parseFloat(document.getElementById("gravityVolume").value);
+  var volumeUnit = document.getElementById("gravityVolumeUnit").value;
+  var time = parseFloat(document.getElementById("gravityTime").value);
+  var timeUnit = document.getElementById("gravityTimeUnit").value;
+  var dropFactor = parseFloat(document.getElementById("gravityDropFactor").value);
+
+  var result = window.DrugCalculator.calculateGravityDrip(volume, volumeUnit, time, timeUnit, dropFactor);
+  var resultDiv = document.getElementById("gravityResult");
+
+  if (result.valid) {
+    resultDiv.className = "calc-result show";
+    resultDiv.innerHTML = 
+      '<h4>✅ Calculation Result</h4>' +
+      '<div class="result-value">' + result.dropRate + ' ' + result.dropRateUnit + '</div>' +
+      '<div class="steps"><strong>Step-by-Step Solution:</strong><ol>' +
+      result.steps.map(function(s) { return '<li>' + s + '</li>'; }).join('') +
+      '</ol></div>';
+  } else {
+    resultDiv.className = "calc-result show error";
+    resultDiv.innerHTML = '<h4>❌ Error</h4><p>' + result.error + '</p>';
+  }
+}
+
+// Initialize syringe simulator
+window.addEventListener("DOMContentLoaded", function() {
+  window.SyringeSimulator.init("syringeCanvas", "syringeControls");
+  window.ContentPage.init("module2");
+});
+</script>
+</body>
+</html>

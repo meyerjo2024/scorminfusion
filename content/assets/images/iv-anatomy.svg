@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Title -->
+  <text x="400" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e3c72">
+    Peripheral IV Cannulation Sites - Anatomical Reference
+  </text>
+  
+  <!-- Arm outline -->
+  <path d="M 200 100 Q 180 200 180 300 Q 180 400 200 500 L 250 550 L 300 500 Q 320 400 320 300 Q 320 200 300 100 Z" 
+        fill="#f5d6c6" stroke="#333" stroke-width="2"/>
+  
+  <!-- Cephalic vein -->
+  <path d="M 220 120 Q 215 200 215 280 Q 215 360 220 450" 
+        stroke="#4169e1" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <text x="180" y="280" font-size="14" font-weight="bold" fill="#4169e1">Cephalic Vein</text>
+  <circle cx="220" cy="280" r="6" fill="#4169e1"/>
+  
+  <!-- Basilic vein -->
+  <path d="M 280 120 Q 285 200 285 280 Q 285 360 280 450" 
+        stroke="#1e90ff" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <text x="295" y="280" font-size="14" font-weight="bold" fill="#1e90ff">Basilic Vein</text>
+  <circle cx="280" cy="280" r="6" fill="#1e90ff"/>
+  
+  <!-- Median cubital vein -->
+  <path d="M 220 200 Q 250 210 280 200" 
+        stroke="#00bfff" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <text x="230" y="230" font-size="14" font-weight="bold" fill="#00bfff">Median Cubital</text>
+  <circle cx="250" cy="210" r="6" fill="#00bfff"/>
+  
+  <!-- Hand veins -->
+  <ellipse cx="225" cy="520" rx="30" ry="15" fill="#f5d6c6" stroke="#333" stroke-width="2"/>
+  <path d="M 215 520 L 220 480" stroke="#87ceeb" stroke-width="3" fill="none"/>
+  <path d="M 225 520 L 225 480" stroke="#87ceeb" stroke-width="3" fill="none"/>
+  <path d="M 235 520 L 230 480" stroke="#87ceeb" stroke-width="3" fill="none"/>
+  <text x="190" y="550" font-size="12" fill="#87ceeb">Dorsal Hand Veins</text>
+  
+  <!-- IV Cannula diagram -->
+  <g transform="translate(450, 150)">
+    <text x="100" y="-10" font-size="18" font-weight="bold" fill="#1e3c72">IV Cannula Components</text>
+    
+    <!-- Catheter -->
+    <rect x="20" y="20" width="200" height="15" fill="#e0e0e0" stroke="#333" stroke-width="1"/>
+    <text x="120" y="50" font-size="12" text-anchor="middle" fill="#333">Catheter (14G-24G)</text>
+    
+    <!-- Hub -->
+    <rect x="220" y="15" width="40" height="25" fill="#ffeb3b" stroke="#333" stroke-width="1"/>
+    <text x="240" y="55" font-size="12" text-anchor="middle" fill="#333">Hub</text>
+    
+    <!-- Flash chamber -->
+    <rect x="260" y="10" width="30" height="35" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
+    <text x="275" y="60" font-size="12" text-anchor="middle" fill="#333">Flash</text>
+    
+    <!-- Needle -->
+    <line x1="10" y1="27.5" x2="220" y2="27.5" stroke="#999" stroke-width="3"/>
+    <text x="110" y="15" font-size="12" text-anchor="middle" fill="#999">Introducer Needle</text>
+  </g>
+  
+  <!-- Cannula gauge chart -->
+  <g transform="translate(450, 280)">
+    <text x="100" y="-10" font-size="18" font-weight="bold" fill="#1e3c72">Cannula Gauge Selection</text>
+    <rect x="0" y="10" width="300" height="200" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+    
+    <text x="10" y="35" font-size="12" font-weight="bold">Gauge</text>
+    <text x="70" y="35" font-size="12" font-weight="bold">Color</text>
+    <text x="140" y="35" font-size="12" font-weight="bold">Indication</text>
+    
+    <!-- 14G -->
+    <text x="10" y="60" font-size="11">14G</text>
+    <rect x="70" y="48" width="40" height="15" fill="#ff6f00"/>
+    <text x="140" y="60" font-size="10">Trauma, massive transfusion</text>
+    
+    <!-- 16G -->
+    <text x="10" y="85" font-size="11">16G</text>
+    <rect x="70" y="73" width="40" height="15" fill="#9e9e9e"/>
+    <text x="140" y="85" font-size="10">Surgery, blood transfusion</text>
+    
+    <!-- 18G -->
+    <text x="10" y="110" font-size="11">18G</text>
+    <rect x="70" y="98" width="40" height="15" fill="#4caf50"/>
+    <text x="140" y="110" font-size="10">Most adults, IV fluids</text>
+    
+    <!-- 20G -->
+    <text x="10" y="135" font-size="11">20G</text>
+    <rect x="70" y="123" width="40" height="15" fill="#e91e63"/>
+    <text x="140" y="135" font-size="10">Elderly, children, medications</text>
+    
+    <!-- 22G -->
+    <text x="10" y="160" font-size="11">22G</text>
+    <rect x="70" y="148" width="40" height="15" fill="#2196f3"/>
+    <text x="140" y="160" font-size="10">Neonates, fragile veins</text>
+    
+    <!-- 24G -->
+    <text x="10" y="185" font-size="11">24G</text>
+    <rect x="70" y="173" width="40" height="15" fill="#ffeb3b"/>
+    <text x="140" y="185" font-size="10">Neonates, scalp veins</text>
+  </g>
+  
+  <!-- Safety notes -->
+  <g transform="translate(50, 450)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#d32f2f">Safety Reminders:</text>
+    <text x="0" y="20" font-size="12">✓ Always use aseptic technique</text>
+    <text x="0" y="40" font-size="12">✓ Secure cannula with transparent dressing</text>
+    <text x="0" y="60" font-size="12">✓ Check for signs of phlebitis, infiltration, extravasation</text>
+    <text x="0" y="80" font-size="12">✓ Largest gauge in largest vein for trauma/resuscitation</text>
+  </g>
+</svg>

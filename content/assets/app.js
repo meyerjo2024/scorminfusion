@@ -1,12 +1,13 @@
 /**
  * Course-shell controller for Paramedic Infusion Therapy SCORM package.
- * Single-module course with final assessment.
+ * Two-module course with interactive calculators/simulator, final assessment.
  */
 (function () {
   "use strict";
 
   var MODULES = [
-    { key: "module1", file: "module1.html", label: "Infusion Therapy &amp; Drug Calculations (120 min)" },
+    { key: "module1", file: "module1.html", label: "Module 1: Infusion Therapy &amp; Drug Calculations (120 min)" },
+    { key: "module2", file: "module2-interactive.html", label: "Module 2: Interactive Calculators &amp; Syringe Simulator (60 min)" },
     { key: "assessment", file: "assessment.html", label: "Final Assessment (40 Marks)" },
   ];
 
@@ -34,14 +35,19 @@
     window.Scorm.commit();
   }
 
-  function moduleComplete() {
-    return !!state.completed["module1"];
+  function allModulesComplete() {
+    return MODULES.slice(0, 2).every(function (m) {
+      return !!state.completed[m.key];
+    });
   }
 
   function computeProgressPercent() {
-    if (state.assessment.attempted) return 100;
-    if (moduleComplete()) return 50;
-    return 0;
+    var doneCount = MODULES.slice(0, 2).filter(function (m) {
+      return !!state.completed[m.key];
+    }).length;
+    var pct = (doneCount / 2) * 100;
+    if (state.assessment.attempted) pct = 100;
+    return pct;
   }
 
   function updateProgressBar() {
@@ -56,7 +62,7 @@
       var a = document.createElement("a");
       a.href = "#";
       a.dataset.key = m.key;
-      var locked = m.key === "assessment" && !moduleComplete();
+      var locked = m.key === "assessment" && !allModulesComplete();
       var complete = !!state.completed[m.key] || (m.key === "assessment" && state.assessment.attempted);
 
       var num = document.createElement("span");
@@ -72,7 +78,7 @@
       if (complete) a.classList.add("complete");
       if (locked) {
         a.classList.add("locked");
-        a.title = "Complete the module to unlock the final assessment.";
+        a.title = "Complete Modules 1-2 to unlock the final assessment.";
       }
 
       a.addEventListener("click", function (e) {
@@ -104,7 +110,11 @@
     updateProgressBar();
     renderNav();
     saveState();
-    window.Scorm.setStatus("incomplete");
+
+    var doneCount = MODULES.slice(0, 2).filter(function (m) {
+      return !!state.completed[m.key];
+    }).length;
+    window.Scorm.setStatus(doneCount === 2 ? "completed" : "incomplete");
   }
 
   function recordAssessmentResult(score, max) {
