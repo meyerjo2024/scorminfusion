@@ -1,0 +1,25 @@
+# OS & Editor
+.DS_Store
+.vscode/
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+
+# Node (if ever used)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Build artifacts
+*.zip
+dist/
+build/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local

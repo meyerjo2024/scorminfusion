@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Final Assessment - Infusion Therapy &amp; Drug Calculations</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="page">
+
+  <span class="meta-bar">Final Summative Assessment &middot; 40 Questions &middot; 1 Mark Each &middot; Pass Mark 24/40 (60%)</span>
+  <h1>Final Assessment: Paramedic Infusion Therapy &amp; Drug Calculations</h1>
+
+  <p>This assessment covers all module content: types of infusions, drug concentration calculations, infusion rate formulas, common paramedic medications, safety protocols, and blood transfusion management. Answer all 40 questions, then click <strong>Submit Assessment</strong>. Each question is worth 1 mark (40 marks total). You need <strong>24/40 (60%)</strong> to pass.</p>
+
+  <div id="resultBanner"></div>
+  <div id="quizProgress" class="quiz-progress"></div>
+  <div id="quizForm"></div>
+
+  <div class="page-actions">
+    <span class="quiz-nav-hint" id="navHint">Answer every question before submitting.</span>
+    <button class="btn" id="submitBtn">Submit Assessment</button>
+  </div>
+
+</div>
+
+<script src="assets/quiz-data.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var data = window.QUIZ_DATA;
+  var form = document.getElementById("quizForm");
+  var submitBtn = document.getElementById("submitBtn");
+  var resultBanner = document.getElementById("resultBanner");
+  var quizProgress = document.getElementById("quizProgress");
+  var navHint = document.getElementById("navHint");
+  var submitted = false;
+
+  function renderQuestions() {
+    var html = "";
+    data.questions.forEach(function (q, idx) {
+      html += '<div class="quiz-q" data-qid="' + q.id + '">';
+      html += '<div class="q-title">Question ' + (idx + 1) + ' of ' + data.questions.length +
+        '<span class="q-marks">1 mark</span></div>';
+      html += '<div>' + escapeHtml(q.text) + '</div><div style="margin-top:10px;">';
+      q.options.forEach(function (opt, optIdx) {
+        var inputId = "q" + q.id + "_opt" + optIdx;
+        html += '<label for="' + inputId + '">' +
+          '<input type="radio" id="' + inputId + '" name="q' + q.id + '" value="' + optIdx + '"> ' +
+          escapeHtml(opt) + '</label>';
+      });
+      html += '</div></div>';
+    });
+    form.innerHTML = html;
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function updateProgress() {
+    var answered = data.questions.filter(function (q) {
+      return !!form.querySelector('input[name="q' + q.id + '"]:checked');
+    }).length;
+    quizProgress.textContent = answered + " of " + data.questions.length + " questions answered.";
+  }
+
+  function gradeQuiz() {
+    var score = 0;
+    data.questions.forEach(function (q) {
+      var qEl = form.querySelector('[data-qid="' + q.id + '"]');
+      var checked = form.querySelector('input[name="q' + q.id + '"]:checked');
+      var chosenIdx = checked ? Number(checked.value) : -1;
+      var isCorrect = chosenIdx === q.correct;
+      if (isCorrect) score++;
+
+      var labels = qEl.querySelectorAll("label");
+      labels.forEach(function (label, optIdx) {
+        if (optIdx === q.correct) label.classList.add("correct");
+        if (optIdx === chosenIdx && !isCorrect) label.classList.add("incorrect");
+      });
+      qEl.querySelectorAll("input").forEach(function (input) {
+        input.disabled = true;
+      });
+    });
+    return score;
+  }
+
+  function showResult(score) {
+    var max = data.totalMarks;
+    var pct = Math.round((score / max) * 100);
+    var passed = score >= data.passMark;
+    resultBanner.innerHTML =
+      '<div class="quiz-result-banner ' + (passed ? "pass" : "fail") + '">' +
+      "Score: " + score + " / " + max + " (" + pct + "%) &mdash; " +
+      (passed ? "PASS" : "NOT YET PASSED &ndash; review the highlighted answers above and revisit the relevant module section.") +
+      "</div>";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  submitBtn.addEventListener("click", function () {
+    if (submitted) return;
+    var unanswered = data.questions.filter(function (q) {
+      return !form.querySelector('input[name="q' + q.id + '"]:checked');
+    });
+    if (unanswered.length > 0) {
+      navHint.textContent = unanswered.length + " question(s) still unanswered. Please answer every question.";
+      navHint.style.color = "#a8241a";
+      document.querySelector('[data-qid="' + unanswered[0].id + '"]').scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+    submitted = true;
+    var score = gradeQuiz();
+    showResult(score);
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Assessment Submitted";
+    navHint.textContent = "Your result has been recorded.";
+    navHint.style.color = "";
+
+    window.parent.postMessage({ type: "assessmentSubmitted", score: score, max: data.totalMarks }, "*");
+  });
+
+  form.addEventListener("change", updateProgress);
+
+  renderQuestions();
+  updateProgress();
+})();
+</script>
+</body>
+</html>
