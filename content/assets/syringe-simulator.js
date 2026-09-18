@@ -118,7 +118,7 @@
       document.getElementById("simTime").textContent = String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
       this.updateDisplay(); this.draw();
       if (this.state.delivered >= this.state.volume) { this.state.running = false; document.getElementById("simStatus").textContent = "Infusion Complete"; document.getElementById("simStart").disabled = false; document.getElementById("simPause").disabled = true; }
-      else requestAnimationFrame(function () { self.run(); });
+      else requestAnimationFrame(function () { window.SyringeSimulator.run(); });
     },
 
     draw: function () {

@@ -6,7 +6,7 @@
   "use strict";
 
   var MODULES = [
-    { key: "module1", file: "module1.html", label: "Module 1: Infusion Therapy &amp; Drug Calculations (120 min)" },
+    { key: "module1", file: "module1.html", label: "Infusion Therapy &amp; Drug Calculations (120 min)" },
     { key: "module2", file: "module2-interactive.html", label: "Module 2: Interactive Calculators &amp; Syringe Simulator (60 min)" },
     { key: "assessment", file: "assessment.html", label: "Final Assessment (40 Marks)" },
   ];
